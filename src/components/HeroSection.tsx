@@ -28,12 +28,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRfp, onSelectCat
             title="Allrite Group Background Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            className="w-full h-full filter brightness-[0.80] contrast-[1.10]"
+            className="w-full h-full opacity-60 mix-blend-screen"
           ></iframe>
         </div>
         
-        {/* Adjusted Subtle Dark Vignette & Gradient Overlay for legibility and video visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/60 to-slate-950/30" />
+        {/* Lighter Gradient Overlay for video visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-slate-950/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20" />
       </div>
 
