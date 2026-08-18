@@ -38,10 +38,10 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
       {/* Top Compliance & Trust Announcement Bar */}
-      <div className="bg-[#071739] text-slate-300 text-xs py-2 border-b border-slate-800">
+      <div className="bg-[#071739] text-slate-300 text-[11px] py-1.5 border-b border-slate-800">
         <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div className="flex items-center gap-3 text-center sm:text-left">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#4EBA36]/15 text-[#4EBA36] font-semibold text-[11px] border border-[#4EBA36]/30">
+          <div className="flex items-center gap-2.5 text-center sm:text-left">
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#4EBA36]/15 text-[#4EBA36] font-semibold text-[10.5px] border border-[#4EBA36]/30">
               <span className="w-1.5 h-1.5 rounded-full bg-[#4EBA36] animate-pulse"></span>
               WHO-GMP & Revised Schedule M Validated
             </span>
@@ -51,30 +51,30 @@ export const Header: React.FC<HeaderProps> = ({
             </span>
           </div>
 
-          <div className="flex items-center gap-5 text-[12px]">
+          <div className="flex items-center gap-4 text-[11px]">
             {onOpenAuditInsights && (
               <button
                 id="header-audit-insights-btn"
                 onClick={onOpenAuditInsights}
                 className="hidden lg:flex items-center gap-1 text-[#38BDF8] hover:text-white font-medium transition-colors"
               >
-                <Award className="w-3.5 h-3.5" />
+                <Award className="w-3 h-3" />
                 <span>Strategy Audit</span>
               </button>
             )}
             <a
               href="mailto:info@pharmatech.in"
-              className="flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors text-xs"
+              className="flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors text-[11px]"
             >
-              <Mail className="w-3.5 h-3.5 text-[#38BDF8]" />
+              <Mail className="w-3 h-3 text-[#38BDF8]" />
               <span className="hidden sm:inline">info@pharmatech.in</span>
             </a>
             <span className="hidden sm:inline text-slate-700">|</span>
             <a
               href="tel:+919317039330"
-              className="flex items-center gap-1.5 text-slate-200 hover:text-[#4EBA36] font-medium transition-colors text-xs"
+              className="flex items-center gap-1.5 text-slate-200 hover:text-[#4EBA36] font-medium transition-colors text-[11px]"
             >
-              <Phone className="w-3.5 h-3.5 text-[#4EBA36]" />
+              <Phone className="w-3 h-3 text-[#4EBA36]" />
               <span>+91 93170 39330</span>
             </a>
           </div>
@@ -83,33 +83,33 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Main Navigation Bar */}
       <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-[68px]">
           {/* Main Logo - P Design Mark */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3 group text-left cursor-pointer"
+            className="flex items-center gap-2.5 group text-left cursor-pointer"
             title="PharmaTech CDMO"
           >
-            <div className="h-12 w-12 rounded-xl bg-white border border-slate-200/90 group-hover:border-[#4EBA36]/60 p-1 flex items-center justify-center shadow-xs group-hover:shadow-md group-hover:shadow-[#4EBA36]/15 transition-all">
-              <PharmaTechIcon size={44} />
+            <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-white border border-slate-200/90 group-hover:border-[#4EBA36]/60 p-1 flex items-center justify-center shadow-xs group-hover:shadow-md group-hover:shadow-[#4EBA36]/15 transition-all">
+              <PharmaTechIcon size={38} />
             </div>
             <div className="flex flex-col">
               <div className="flex items-baseline">
-                <span className="text-2xl font-extrabold tracking-tight text-[#0B2553] font-['Outfit',sans-serif]">
+                <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-[#0B2553] font-['Outfit',sans-serif]">
                   pharma<span className="text-[#4EBA36]">tech</span>
                 </span>
               </div>
               <div className="flex items-center gap-1.5 -mt-0.5">
-                <span className="text-[9px] font-bold tracking-[0.2em] text-[#0284C7] uppercase font-mono">
+                <span className="text-[8.5px] font-bold tracking-[0.2em] text-[#0284C7] uppercase font-mono">
                   CDMO
                 </span>
-                <span className="text-[9px] text-slate-400 font-semibold">• INDIA</span>
+                <span className="text-[8.5px] text-slate-400 font-semibold">• INDIA</span>
               </div>
             </div>
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 bg-slate-50/90 p-1.5 rounded-xl border border-slate-200/70">
+          <nav className="hidden lg:flex items-center gap-0.5 bg-slate-50/90 p-1 rounded-xl border border-slate-200/70">
             {navItems.map((item) => {
               const isActive = currentPage === item.id;
               return (

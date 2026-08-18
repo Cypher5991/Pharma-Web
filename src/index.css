@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+/* Proportional scaling to match the crisp 80% magnification look & feel at default 100% zoom */
+html {
+  font-size: 85%; /* 13.6px base font-size scales all rem units by ~18% proportionally */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 87.5%; /* 14px base for extra-wide displays */
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
