@@ -37,10 +37,10 @@ export const TrustAccreditationBanner: React.FC<TrustAccreditationBannerProps> =
         {/* Section Header - Minimal & Clear */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-slate-100 gap-4">
           <div className="space-y-2 max-w-2xl">
-            <div className="text-xs font-bold uppercase tracking-wider text-blue-600">
+            <div className="text-xs font-bold uppercase tracking-wider text-[#0284C7]">
               Regulatory Accreditations & Audits
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-['Outfit',sans-serif] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B2553] font-['Outfit',sans-serif] tracking-tight">
               Validated Global Quality Standards
             </h2>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -51,14 +51,14 @@ export const TrustAccreditationBanner: React.FC<TrustAccreditationBannerProps> =
           <div className="flex items-center gap-3 shrink-0">
             <button
               onClick={() => setSelectedCert(TRUST_CERTIFICATIONS[0])}
-              className="text-xs font-semibold text-slate-700 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5"
+              className="text-xs font-semibold text-slate-700 hover:text-[#0B2553] bg-slate-100 hover:bg-slate-200 px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5"
             >
               <Info className="w-3.5 h-3.5 text-slate-500" />
               <span>Compliance Standards</span>
             </button>
             <button
               onClick={onOpenRfp}
-              className="text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5"
+              className="text-xs font-bold text-white bg-gradient-to-r from-[#0B2553] via-[#0284C7] to-[#4EBA36] hover:opacity-95 px-4 py-2.5 rounded-xl transition-all shadow-sm shadow-[#0B2553]/20 flex items-center gap-1.5"
             >
               <span>Request Audit Dossier</span>
               <ChevronRight className="w-3.5 h-3.5" />
@@ -72,16 +72,16 @@ export const TrustAccreditationBanner: React.FC<TrustAccreditationBannerProps> =
             <div
               key={cert.id}
               onClick={() => setSelectedCert(cert)}
-              className="p-5 rounded-2xl border border-slate-200/90 hover:border-blue-400 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
+              className="p-5 rounded-2xl border border-slate-200/90 hover:border-[#4EBA36]/60 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs">
                       {getIcon(cert.iconName)}
                     </div>
                     <div>
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600 block">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#0284C7] block">
                         {cert.badgeText}
                       </span>
                       <h3 className="text-sm font-bold text-slate-900 font-['Outfit',sans-serif]">
@@ -89,7 +89,7 @@ export const TrustAccreditationBanner: React.FC<TrustAccreditationBannerProps> =
                       </h3>
                     </div>
                   </div>
-                  <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/60 shrink-0">
+                  <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-[#4EBA36]/10 text-[#2E8B1E] border border-[#4EBA36]/20 shrink-0">
                     {cert.verifiedYear}
                   </span>
                 </div>
@@ -101,7 +101,7 @@ export const TrustAccreditationBanner: React.FC<TrustAccreditationBannerProps> =
 
               <div className="pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500 font-medium">
                 <span>Authority: <strong className="text-slate-700 font-semibold">{cert.authority}</strong></span>
-                <span className="text-blue-600 font-semibold group-hover:translate-x-0.5 transition-transform">View specs &rarr;</span>
+                <span className="text-[#4EBA36] font-semibold group-hover:translate-x-0.5 transition-transform">View specs &rarr;</span>
               </div>
             </div>
           ))}

@@ -204,20 +204,20 @@ export default function App() {
         <button
           id="floating-tour-btn"
           onClick={() => setIsTourOpen(true)}
-          className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-full bg-slate-900/90 hover:bg-slate-900 text-white text-xs font-bold shadow-xl border border-slate-700 hover:border-blue-500 backdrop-blur-md transition-all group"
+          className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-full bg-slate-900/90 hover:bg-slate-900 text-white text-xs font-bold shadow-xl border border-slate-700 hover:border-[#4EBA36] backdrop-blur-md transition-all group"
         >
-          <Eye className="w-3.5 h-3.5 text-blue-400 group-hover:scale-110 transition-transform" />
+          <Eye className="w-3.5 h-3.5 text-[#38BDF8] group-hover:scale-110 transition-transform" />
           <span>Cleanroom Tour</span>
         </button>
 
         <button
           id="floating-audit-btn"
           onClick={() => setIsAuditOpen(true)}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-xl shadow-blue-500/20 border border-blue-400/40 transition-all group"
+          className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-[#0B2553] via-[#0284C7] to-[#4EBA36] hover:opacity-95 text-white text-xs font-bold shadow-xl shadow-[#0B2553]/30 border border-white/20 transition-all group"
         >
-          <Award className="w-4 h-4 text-blue-200 group-hover:scale-110 transition-transform" />
+          <Award className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
           <span>Strategy Audit</span>
-          <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
+          <span className="w-2 h-2 rounded-full bg-[#4EBA36] ring-2 ring-white/30 animate-pulse"></span>
         </button>
       </div>
     </div>

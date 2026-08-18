@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck, MapPin, Mail, Phone, ArrowRight, Award, FileText } from 'lucide-react';
 import { DosageCategoryId, NavPageId } from '../types';
+import { PharmaTechIcon } from './PharmaTechLogo';
 
 interface FooterProps {
   onOpenRfp: (category?: string, specificForm?: string) => void;
@@ -65,20 +66,22 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Company Brand Column */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleNav('home')}>
-              <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-800 p-0.5 flex items-center justify-center shadow-md shadow-blue-500/20">
-                <div className="h-full w-full rounded-[10px] bg-slate-950 flex items-center justify-center">
-                  <ShieldCheck className="w-5 h-5 text-blue-400" />
-                </div>
+              <div className="h-12 w-12 rounded-xl bg-slate-900 border border-slate-800 p-1 flex items-center justify-center shadow-md">
+                <PharmaTechIcon size={42} />
               </div>
               <div>
-                <span className="text-xl font-bold text-white tracking-tight font-['Outfit',sans-serif]">
-                  Pharma<span className="text-blue-400">Tech</span> Group
+                <span className="text-2xl font-extrabold text-white tracking-tight font-['Outfit',sans-serif]">
+                  pharma<span className="text-[#4EBA36]">tech</span>
                 </span>
-                <div className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                  Contract Development & Manufacturing
+                <div className="text-[10px] font-bold text-[#0284C7] uppercase tracking-[0.2em] font-mono">
+                  CDMO • INDIA
                 </div>
               </div>
             </div>
+
+            <p className="text-xs font-semibold text-[#4EBA36] tracking-wider uppercase">
+              Partnering Innovation. Delivering Health.
+            </p>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
               India’s high-capacity pharmaceutical, derma-cosmetic, and AYUSH contract development and manufacturing organization (CDMO). Operating WHO-GMP certified facilities with 1.4B+ monthly unit throughput in Baddi, Himachal Pradesh.
@@ -86,25 +89,25 @@ export const Footer: React.FC<FooterProps> = ({
 
             <div className="space-y-2 pt-2 text-xs text-slate-400">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-blue-400 mt-0.5 shrink-0" />
+                <MapPin className="w-4 h-4 text-[#0284C7] mt-0.5 shrink-0" />
                 <span>
                   <strong>Plant:</strong> Plot No. 114-A, EPIP, Phase-II, Village Thana, Baddi, Distt. Solan, HP – 173205
                 </span>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+                <MapPin className="w-4 h-4 text-[#4EBA36] mt-0.5 shrink-0" />
                 <span>
                   <strong>Corporate:</strong> B-206, 2nd Floor, Elante Office Complex, Chandigarh – 160002
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-blue-400 shrink-0" />
+                <Mail className="w-4 h-4 text-[#0284C7] shrink-0" />
                 <a href="mailto:info@pharmatech.in" className="hover:text-white transition-colors">
                   info@pharmatech.in • bd@pharmatech.in
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
+                <Phone className="w-4 h-4 text-[#4EBA36] shrink-0" />
                 <a href="tel:+919317039330" className="hover:text-white transition-colors font-mono">
                   +91 93170 39330 / +91 1795 244 800
                 </a>

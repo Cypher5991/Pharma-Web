@@ -87,11 +87,11 @@ export const DosageMatrixSection: React.FC<DosageMatrixSectionProps> = ({
       <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100/80 text-blue-800 text-xs font-bold uppercase tracking-wider">
-            <SlidersHorizontal className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0B2553]/10 text-[#0B2553] text-xs font-bold uppercase tracking-wider">
+            <SlidersHorizontal className="w-3.5 h-3.5 text-[#0284C7]" />
             <span>Formulation Specifications</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-['Outfit',sans-serif] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2553] font-['Outfit',sans-serif] tracking-tight">
             Dosage Form Capabilities & Production Lines
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -114,16 +114,16 @@ export const DosageMatrixSection: React.FC<DosageMatrixSectionProps> = ({
                   }}
                   className={`relative p-3.5 rounded-xl text-left transition-all flex flex-col justify-between gap-2 ${
                     isActive
-                      ? 'bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-700 text-white shadow-md shadow-blue-500/20'
-                      : 'bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-100'
+                      ? 'bg-gradient-to-br from-[#0B2553] via-[#0284C7] to-[#4EBA36] text-white shadow-md shadow-[#0B2553]/25'
+                      : 'bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-[#0B2553] border border-slate-100'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <div className={`p-2 rounded-lg ${isActive ? 'bg-white/20 text-white' : 'bg-blue-100 text-blue-700'}`}>
+                    <div className={`p-2 rounded-lg ${isActive ? 'bg-white/20 text-white' : 'bg-[#0284C7]/10 text-[#0284C7]'}`}>
                       {getCategoryIcon(cat.iconName, 'w-4 h-4')}
                     </div>
                     {isActive && (
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                      <span className="w-2 h-2 rounded-full bg-[#4EBA36] ring-2 ring-white/40 animate-pulse"></span>
                     )}
                   </div>
 

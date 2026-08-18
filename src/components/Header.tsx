@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { ShieldCheck, Phone, Mail, ArrowRight, Menu, X, Award, Search, Sparkles } from 'lucide-react';
 import { NavPageId } from '../types';
+import { PharmaTechIcon } from './PharmaTechLogo';
 
 interface HeaderProps {
   currentPage: NavPageId;
@@ -36,17 +37,17 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
-      {/* Top Compliance & Trust Announcement Bar - Wide Screen */}
-      <div className="bg-slate-950 text-slate-300 text-xs py-2 border-b border-slate-850">
+      {/* Top Compliance & Trust Announcement Bar */}
+      <div className="bg-[#071739] text-slate-300 text-xs py-2 border-b border-slate-800">
         <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-3 text-center sm:text-left">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-medium text-[11px] border border-emerald-500/20">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#4EBA36]/15 text-[#4EBA36] font-semibold text-[11px] border border-[#4EBA36]/30">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#4EBA36] animate-pulse"></span>
               WHO-GMP & Revised Schedule M Validated
             </span>
             <span className="hidden md:inline text-slate-600">|</span>
-            <span className="hidden md:inline text-slate-400 text-[11px]">
-              Baddi Campus, Himachal Pradesh • 1.4B+ Monthly Unit Scale
+            <span className="hidden md:inline text-slate-300 text-[11px]">
+              Baddi Campus, Himachal Pradesh • 1.4B+ Monthly Scale
             </span>
           </div>
 
@@ -55,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 id="header-audit-insights-btn"
                 onClick={onOpenAuditInsights}
-                className="hidden lg:flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                className="hidden lg:flex items-center gap-1 text-[#38BDF8] hover:text-white font-medium transition-colors"
               >
                 <Award className="w-3.5 h-3.5" />
                 <span>Strategy Audit</span>
@@ -63,53 +64,52 @@ export const Header: React.FC<HeaderProps> = ({
             )}
             <a
               href="mailto:info@pharmatech.in"
-              className="flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors text-xs"
+              className="flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors text-xs"
             >
-              <Mail className="w-3.5 h-3.5 text-blue-400" />
+              <Mail className="w-3.5 h-3.5 text-[#38BDF8]" />
               <span className="hidden sm:inline">info@pharmatech.in</span>
             </a>
             <span className="hidden sm:inline text-slate-700">|</span>
             <a
               href="tel:+919317039330"
-              className="flex items-center gap-1.5 text-slate-300 hover:text-white font-medium transition-colors text-xs"
+              className="flex items-center gap-1.5 text-slate-200 hover:text-[#4EBA36] font-medium transition-colors text-xs"
             >
-              <Phone className="w-3.5 h-3.5 text-emerald-400" />
+              <Phone className="w-3.5 h-3.5 text-[#4EBA36]" />
               <span>+91 93170 39330</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Main Navigation Bar - Wide Screen */}
+      {/* Main Navigation Bar */}
       <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          {/* Logo Brand */}
+          {/* Main Logo - P Design Mark */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3.5 group text-left cursor-pointer"
+            className="flex items-center gap-3 group text-left cursor-pointer"
+            title="PharmaTech CDMO"
           >
-            <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-800 p-0.5 flex items-center justify-center shadow-sm shadow-blue-500/20 group-hover:scale-105 transition-transform">
-              <div className="h-full w-full rounded-[10px] bg-slate-950 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-blue-400" />
-              </div>
+            <div className="h-12 w-12 rounded-xl bg-white border border-slate-200/90 group-hover:border-[#4EBA36]/60 p-1 flex items-center justify-center shadow-xs group-hover:shadow-md group-hover:shadow-[#4EBA36]/15 transition-all">
+              <PharmaTechIcon size={44} />
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-extrabold tracking-tight text-slate-900 font-['Outfit',sans-serif]">
-                  Pharma<span className="text-blue-600">Tech</span>
-                </span>
-                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200">
-                  CDMO
+              <div className="flex items-baseline">
+                <span className="text-2xl font-extrabold tracking-tight text-[#0B2553] font-['Outfit',sans-serif]">
+                  pharma<span className="text-[#4EBA36]">tech</span>
                 </span>
               </div>
-              <span className="text-[10px] font-medium text-slate-500 tracking-wider uppercase">
-                Contract Development & Manufacturing
-              </span>
+              <div className="flex items-center gap-1.5 -mt-0.5">
+                <span className="text-[9px] font-bold tracking-[0.2em] text-[#0284C7] uppercase font-mono">
+                  CDMO
+                </span>
+                <span className="text-[9px] text-slate-400 font-semibold">• INDIA</span>
+              </div>
             </div>
           </button>
 
-          {/* Desktop Navigation Links - Minimal & Clean */}
-          <nav className="hidden lg:flex items-center gap-1.5 bg-slate-50/80 p-1.5 rounded-xl border border-slate-200/60">
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-1 bg-slate-50/90 p-1.5 rounded-xl border border-slate-200/70">
             {navItems.map((item) => {
               const isActive = currentPage === item.id;
               return (
@@ -119,13 +119,13 @@ export const Header: React.FC<HeaderProps> = ({
                   className={`relative px-4 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
                     isActive
                       ? 'text-white'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-white'
+                      : 'text-slate-600 hover:text-[#0B2553] hover:bg-white'
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="activeNavTab"
-                      className="absolute inset-0 bg-slate-900 rounded-lg shadow-sm"
+                      className="absolute inset-0 bg-[#0B2553] rounded-lg shadow-sm"
                       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -134,8 +134,8 @@ export const Header: React.FC<HeaderProps> = ({
                     <span
                       className={`relative z-10 px-1.5 py-0.2 rounded text-[9px] font-bold ${
                         isActive
-                          ? 'bg-white/20 text-white'
-                          : 'bg-blue-50 text-blue-700'
+                          ? 'bg-[#4EBA36] text-white'
+                          : 'bg-[#4EBA36]/15 text-[#2E8B1E]'
                       }`}
                     >
                       {item.badge}
@@ -151,7 +151,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               id="header-portfolio-quick-btn"
               onClick={() => handleNavClick('portfolio')}
-              className="px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors flex items-center gap-1.5"
+              className="px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-700 hover:text-[#0B2553] hover:bg-slate-100 transition-colors flex items-center gap-1.5"
               title="Search Product Catalog"
             >
               <Search className="w-3.5 h-3.5 text-slate-400" />
@@ -161,7 +161,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               id="header-rfp-btn"
               onClick={() => onOpenRfp()}
-              className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-sm transition-all flex items-center gap-2"
+              className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#0B2553] via-[#0284C7] to-[#4EBA36] hover:opacity-95 shadow-sm shadow-[#0B2553]/20 transition-all flex items-center gap-2"
             >
               <span>Request Batch RFP</span>
               <ArrowRight className="w-3.5 h-3.5" />
