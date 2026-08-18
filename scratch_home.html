@@ -1,0 +1,2366 @@
+<style>
+    /*==============================
+  Feature Box (with overlay effect)
+===============================*/
+.feature-one__single {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  min-height: 340px;
+  border-radius: 8px;
+}
+
+.feature-one__single::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.feature-one__single-inner {
+  position: relative;
+  height: 100%;
+  padding: 30px 25px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.feature-one__icon svg {
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+  margin-bottom: 18px;
+}
+
+.feature-one__single:hover::before,
+.feature-one__single:focus-within::before {
+  opacity: 1;
+}
+
+.feature-one__single:hover .feature-one__single-inner,
+.feature-one__single:focus-within .feature-one__single-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-one__more {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.feature-one__more:hover {
+  text-decoration: underline;
+}
+
+/*==============================
+  Customers Scroller
+===============================*/
+.customers-section {
+  background-color: #f9fafb;
+  padding: 1rem 0;
+}
+
+.customers-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+}
+
+.customers-logos-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: scroll-x 22s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.customer-logo {
+  height: 80px;
+  flex-shrink: 0;
+  margin: 0 24px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.customer-logo:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.section-sub-title {
+  margin-top: -10px;
+}
+
+/*==============================
+  Swiper General
+===============================*/
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  height: auto !important;
+  overflow: visible !important;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.swiper-wrapper,
+.swiper-container {
+  height: auto !important;
+}
+
+/*==============================
+  Journey Icons
+===============================*/
+.journey-icon {
+  color: #004aad;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.journey-text {
+  color: #222;
+  text-align: justify;
+}
+
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #333;
+}
+
+.icon-circle i {
+  font-size: 28px;
+}
+
+/*==============================
+  Responsive Styling
+===============================*/
+@media (max-width: 1200px) {
+  .customers-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .feature-one__single-inner {
+    padding: 20px 20px;
+  }
+
+  .customers-title {
+    font-size: 2rem;
+  }
+
+  .customer-logo {
+    height: 70px;
+    margin: 0 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-slider__content i {
+    width: 50px;
+    text-align: center;
+  }
+
+  .journey-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .customers-title {
+    font-size: 1.75rem;
+  }
+
+  .customer-logo {
+    height: 60px;
+    margin: 0 1rem;
+  }
+
+  .main-slider__content {
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .main-slider__title {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .main-slider__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .main-img img {
+    width: 90% !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .main-slider__btn-box {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .main-slider__btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+    width: auto;
+  }
+
+  .main-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-slider__title {
+    font-size: 1.5rem;
+  }
+
+  .main-slider__text {
+    font-size: 1rem;
+  }
+
+  .main-slider__btn {
+    font-size: 0.95rem;
+    padding: 8px 20px;
+  }
+
+  .main-img img {
+    width: 100% !important;
+  }
+
+  .customers-title {
+    font-size: 1.5rem;
+  }
+
+  .customer-logo {
+    height: 50px;
+    margin: 0 0.75rem;
+  }
+
+  .journey-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  /* Mobile adjustments */
+@media (max-width: 767px) {
+    .why-choose-one {
+        height: auto !important; /* allow it to expand if needed */
+        padding-bottom: 100px;   /* make space for call box */
+    }
+
+    .about-one__call {
+        position: relative; /* or absolute if you want it at bottom */
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 20px;
+        z-index: 10;
+    }
+
+    .about-one__call-icon {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .about-one__call-content a,
+    .about-one__call-content p {
+        color: #fff;
+        margin: 0;
+        line-height: 1.2;
+    }
+    
+}
+
+  
+}
+/* ====== Mobile Slider Fix (≤991px) ====== */
+
+
+/* ===== MOBILE VIEW FIX ===== */
+@media (max-width: 768px) {
+  .slider-mobile-img {
+    width: 90%;
+    margin-left: 0;     /* ✅ negative margin remove */
+    margin-top: 10px;
+    display: block;
+    margin-right: 120px;
+    margin-left: auto; /* ✅ center me laata hai */
+  }
+
+ 
+   .slider-mobile-container {
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.2rem !important;
+  }
+
+  .main-slider__btn-box {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  /* Shape hide on mobile (as earlier) */
+  .main-slider-shape-1 img {
+    display: none;
+  }
+  @media (max-width: 768px){
+  .main-slider__cont{
+    margin-top: 0;
+    padding-top: 120px;
+  }
+}
+}
+
+/* Tablet & Small Laptop */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .main-slider__nav{
+        position: absolute !important;
+        left: 10px !important;
+        right: auto !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 999;
+    }
+
+    .main-slider__nav .swiper-button-prev,
+    .main-slider__nav .swiper-button-next{
+        width:45px;
+        height:45px;
+    }
+}
+.about-video{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.about-video iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 991px){
+    .about-video{
+        height: 350px;
+    }
+}
+
+@media (max-width: 767px){
+    .about-video{
+        height: 220px;
+    }
+}
+.accreditation-logo{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: -40px;   /* Move left */
+    margin-top: -105px;    /* Move up */
+}
+
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZZS79D96R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JZZS79D96R');
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Best Third Party Pharma Manufacturer India - Allrite Group</title>
+
+    
+      <meta name="description" content="At Allrite Group we offer top third party pharma manufacturer in India. Get WHO GMP certified contract manufacturing services from our Baddi unit. Request a free quote today!">
+       <!-- ✅ GOOGLE SITE VERIFICATION TAG -->
+     <meta name="google-site-verification" content="ZRUoJLKX7bdViSwJie9vfgrWxQfCqFxoy2gAGtp8mkk" />
+     
+    <link rel="canonical" href="https://allrite.in/" />
+<meta name="keywords" content="third party pharma manufacturer india, contract manufacturing pharma India, pharma manufacturing company in Baddi">
+
+<!-- ================= SEO ================= -->
+
+
+<!-- ================= Open Graph ================= -->
+<meta property="og:title" content="Best Third Party Pharma Manufacturer in India | Allrite Group">
+<meta property="og:description" content="WHO-GMP certified third-party pharma manufacturing services for tablets, capsules, syrups and more. Trusted by top pharma brands across India.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.allrite.in/">
+<meta property="og:image" content="https://www.allrite.in/wp-content/uploads/2024/10/allrite-og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- ================= Twitter ================= -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Best Third Party Pharma Manufacturer in India | Allrite Group">
+<meta name="twitter:description" content="Allrite Group offers trusted WHO-GMP certified third-party pharma manufacturing services.">
+<meta name="twitter:image" content="https://www.allrite.in/wp-content/uploads/2024/10/allrite-og-image.jpg">
+
+<!-- ================= Favicons ================= -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/fav180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon16x16.png">
+<link rel="manifest" href="/assets/images/favicons/site.webmanifest">
+
+<!-- ================= Fonts (NORMAL – NO FLASH) ================= -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap">
+
+<!-- ================= LCP IMAGE PRELOAD ================= -->
+
+
+
+<!-- ================= BASE CRITICAL CSS ================= -->
+<style>
+    body {
+        margin: 0;
+        font-family: 'DM Sans', sans-serif;
+        background-color: #ffffff;
+    }
+</style>
+
+<!-- ================= VENDOR CSS (ASYNC – SAFE) ================= -->
+
+<link rel="preload" href="/assets/vendors/bootstrap/css/bootstrap.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/bootstrap/css/bootstrap.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/animate/animate.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/animate/animate.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/animate/custom-animate.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/animate/custom-animate.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/fontawesome/css/all.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/fontawesome/css/all.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/jarallax/jarallax.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/jarallax/jarallax.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/nouislider/nouislider.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/nouislider/nouislider.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/nouislider/nouislider.pips.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/nouislider/nouislider.pips.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/odometer/odometer.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/odometer/odometer.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/swiper/swiper.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/swiper/swiper.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/insur-icons/style.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/insur-icons/style.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/insur-two-icon/style.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/insur-two-icon/style.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/tiny-slider/tiny-slider.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/tiny-slider/tiny-slider.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/reey-font/stylesheet.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/reey-font/stylesheet.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/owl-carousel/owl.carousel.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/owl-carousel/owl.carousel.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/owl-carousel/owl.theme.default.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/owl-carousel/owl.theme.default.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/bxslider/jquery.bxslider.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/bxslider/jquery.bxslider.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/bootstrap-select/css/bootstrap-select.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/bootstrap-select/css/bootstrap-select.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/vegas/vegas.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/vegas/vegas.min.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/jquery-ui/jquery-ui.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/jquery-ui/jquery-ui.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/timepicker/timePicker.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/timepicker/timePicker.css">
+</noscript>
+<link rel="preload" href="/assets/vendors/ion.rangeSlider/css/ion.rangeSlider.min.css"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="/assets/vendors/ion.rangeSlider/css/ion.rangeSlider.min.css">
+</noscript>
+
+<!-- ================= MAIN TEMPLATE CSS (NORMAL – UX SAFE) ================= -->
+<link rel="stylesheet" id="langLtr" href="/assets/css/insur.css">
+
+
+</head>
+<body class="custom-cursor">
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+
+    <div class="page-wrapper">
+        <header class="main-header clearfix">
+    <div class="main-header__top">
+        <div class="container">
+            <div class="main-header__top-inner">
+                <div class="main-header__top-address">
+                    <ul class="list-unstyled main-header__top-address-list">
+                        <li>
+                            <i class="icon">
+                                <i class="fas fa-phone"></i>
+                            </i>
+                            <div class="text">
+                                <p>
+                                    <a href="tel:+919317039330" style="color: inherit; text-decoration: none;">
+                                        +91-9317039330
+                                    </a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+
+                            <i class="icon">
+                                <span class="icon-email" style="color: #696e77;"></span>
+                            </i>
+                            <div class="text">
+                                <p><a href="mailto:info@allrite.in">info@allrite.in</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-header__top-right">
+
+                    <div class="main-header__top-social-box">
+                        <div class="main-header__top-social">
+                            <a href="https://www.facebook.com/profile.php?id=61577104462937" class="text-white me-3"><i
+                                    class="fab fa-facebook"></i></a>
+                            
+                            <a href="https://x.com/AllriteGroup" class="text-white me-3" target="_blank">
+                                <span style="font-size:18px;font-weight:bold;">𝕏</span>
+                            </a>
+                            <a href="https://www.instagram.com/allritegroup/" class="text-white me-3"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@AllriteHealthcare" class="text-white me-3"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/company/allritegroup" class="text-white"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="main-menu clearfix">
+        <div class="main-menu__wrapper clearfix">
+            <div class="container">
+                <div class="main-menu__wrapper-inner clearfix" style="padding:0px;">
+                    <div class="main-menu__left">
+                        <div class="main-menu__logo">
+                            <a href="/"><img src="/assets/images/resources/logo1.png"
+                                    alt="Allrite Group logo" style="max-width: 150px;"></a>
+
+                        </div>
+                        <div class="main-menu__main-menu-box">
+                            <div class="main-menu__main-menu-box-inner">
+                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                <ul class="main-menu__list">
+                                    <li>
+                                        <a href="/">Home</a>
+
+                                    </li>
+                                    
+                                    <li class="dropdown">
+                                        <a href="https://www.allrite.in/about">About</a>
+
+                                        <ul>
+                                            <li>
+                                                <a href="https://www.allrite.in/accreditation">Accreditation</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.allrite.in/life">
+                                                    Life at Allrite
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.allrite.in/leadership-team">
+                                                    Leadership Team
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+
+
+
+
+                                    <li class="dropdown">
+                                        <a href="https://www.allrite.in/our-portfolio">Our Portfolio</a>
+                                        <ul>
+                                            <li><a href="https://www.allrite.in/Oral-Solid-Dosage">Oral Solid Dose (Pharma)</a></li>
+                                            <li><a href="https://www.allrite.in/liquid-oral">Oral Liquid (Pharma)</a></li>
+
+                                            <li><a href="https://www.allrite.in/external-preparations"> Derma External Preparations</a>
+                                            </li>
+                                            <li><a href="https://www.allrite.in/cosmetic">Cosmetic External Preparations</a>
+                                            </li>
+
+
+
+                                            <li><a href="https://www.allrite.in/Soap">Soap (Derma, Cosmetic & Ayush)</a></li>
+
+                                            
+                                            <li><a href="https://www.allrite.in/Sachets">Sachets (Pharma)</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="https://www.allrite.in/manufacturing-facilities">Manufacturing Facilities</a>
+                                        <ul>
+                                            <li><a href="https://www.allrite.in/healthcare-unit-I">Allrite Healthcare Unit-I</a></li>
+                                            <li><a href="https://www.allrite.in/healthcare-unit-II">Allrite Healthcare Unit-II</a></li>
+                                            <li><a href="https://www.allrite.in/pharmaceuticals-Unit-I">Allrite
+                                                    Pharmaceuticals
+                                                    Unit-I</a></li>
+                                            <li><a href="https://www.allrite.in/Pharmaceuticals-Unit-II">Allrite
+                                                    Pharmaceuticals
+                                                    Unit-II</a></li>
+                                            <li><a href="https://www.allrite.in/research-development"> Allrite Research &
+                                                    Development</a></li>
+
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.allrite.in/ourclient">Our Clients</a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="https://www.allrite.in/blogs">Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.allrite.in/career">Career</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.allrite.in/contact">Contact</a>
+                                    </li>
+
+
+
+                                </ul>
+
+                            </div>
+                            <div class="main-menu__main-menu-box-search-get-quote-btn">
+                                
+                                <div class="main-menu__main-menu-box-get-quote-btn-box">
+                                    <a href="/contact" class="thm-btn main-menu__main-menu-box-get-quote-btn">Get a
+                                        Quote</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="scrolling-bar">
+            <span>
+                MILESTONE ACHIEVED: Allrite Pharmaceuticals is now officially cGMP Certified!
+                &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                NEW: We are proud to announce our Baddi facility is now cGMP Approved!
+                &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                GLOBAL STANDARDS UNLOCKED: Allrite is now cGMP Certified!
+            </span>
+        </div>
+    </nav>
+</header>
+<div class="stricky-header stricked-menu main-menu">
+    <div class="sticky-header__content"></div>
+</div>
+
+<div class="stricky-header stricked-menu main-menu">
+    <div class="sticky-header__content"></div>
+</div>
+
+
+<div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+
+    <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+        <div class="logo-box mb-4 text-center">
+            <a href="/"><img src="/assets/images/resources/logo1.png" width="120"
+                    alt="Allrite Group logo"></a>
+        </div>
+
+        <nav class="mobile-nav__container">
+            <ul class="list-unstyled">
+                <li><a href="/">Home</a></li>
+                <li><a href="https://www.allrite.in/about">About</a></li>
+
+                <li class="dropdown">
+                    <a href="https://www.allrite.in/our-portfolio">Our Portfolio</a>
+                    <ul>
+                        <li><a href="https://www.allrite.in/cosmetic">Cosmetic</a></li>
+                        <li><a href="https://www.allrite.in/Oral-Solid-Dosage">OSD</a></li>
+                        <li><a href="https://www.allrite.in/external-preparations">External</a></li>
+                        <li><a href="https://www.allrite.in/liquid-oral">Liquid</a></li>
+                        <li><a href="https://www.allrite.in/Soap">Soap</a></li>
+                        <li><a href="https://www.allrite.in/Sachets">Sachets</a></li>
+                        <li><a href="https://www.allrite.in/Ayush">Ayush</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Facilities</a>
+                    <ul>
+                        <li><a href="https://www.allrite.in/healthcare-unit-I">Unit‑I</a></li>
+                        <li><a href="https://www.allrite.in/healthcare-unit-II">Unit‑II</a></li>
+                        <li><a href="https://www.allrite.in/pharmaceuticals-Unit-I">Pharma Unit‑I</a></li>
+                        <li><a href="https://www.allrite.in/Pharmaceuticals-Unit-II">Pharma Unit‑II</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="https://www.allrite.in/ourclient">Clients</a></li>
+                <li><a href="https://www.allrite.in/contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="mobile-nav__social mt-4 text-center">
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Open / Close Mobile Drawer
+    const togglers = document.querySelectorAll('.mobile-nav__toggler');
+    const drawer = document.querySelector('.mobile-nav__wrapper');
+
+    togglers.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            drawer.classList.toggle('open');
+            document.body.classList.toggle('mobile-nav-active');
+        });
+    });
+
+    // Mobile Dropdown
+    document.querySelectorAll('.mobile-nav__container li.dropdown > a').forEach(function (link) {
+
+        link.addEventListener('click', function (e) {
+
+            const submenu = this.nextElementSibling;
+
+            // Only toggle if href is empty or '#'
+            if (
+                this.getAttribute('href') === '' ||
+                this.getAttribute('href') === '#' ||
+                this.getAttribute('href') === null
+            ) {
+                e.preventDefault();
+
+                submenu.style.display =
+                    submenu.style.display === 'block' ? 'none' : 'block';
+            }
+
+        });
+
+    });
+
+});
+</script>
+
+<style>
+    .scrolling-bar {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        background: #fff;
+        /* same as navbar background */
+        border-top: 1px solid #eee;
+        padding: 6px 0;
+        /* thoda zyada space top-bottom */
+        text-align: center;
+    }
+
+    .scrolling-bar span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: scrollBar 35s linear infinite;
+
+        font-size: 18px;
+        /* bigger */
+        font-weight: 700;
+        /* bold */
+        color: #012F66;
+        /*  dark black*/
+        letter-spacing: 1px;
+        line-height: 1.6;
+        /* extra height to stop cutting */
+
+    }
+
+    @keyframes scrollBar {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .main-menu__list>li+li {
+        margin-left: 25px !important;
+    }
+    /* ================= MOBILE MENU FIX ================= */
+
+.mobile-nav__wrapper{
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 99999 !important;
+
+    visibility: hidden !important;
+    opacity: 0 !important;
+
+    transition: opacity .3s ease !important;
+}
+
+.mobile-nav__wrapper.open{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.mobile-nav__overlay{
+    position: absolute !important;
+    inset: 0 !important;
+    background: rgba(0,0,0,.5) !important;
+}
+
+.mobile-nav__content{
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 300px !important;
+    max-width: 85% !important;
+    height: 100% !important;
+
+    background: #fff !important;
+    overflow-y: auto !important;
+
+    transform: translateX(-100%) !important;
+    transition: transform .3s ease !important;
+
+    z-index: 100000 !important;
+}
+
+.mobile-nav__wrapper.open .mobile-nav__content{
+    transform: translateX(0) !important;
+}
+
+body.mobile-nav-active{
+    overflow: hidden !important;
+}
+</style>        <!--Main Slider Start-->
+<section class="main-slider clearfix">
+<div class="swiper-container thm-swiper__slider"
+data-swiper-options='{"slidesPerView": 1, "loop": true,
+"effect": "fade",
+"pagination": {
+"el": "#main-slider-pagination",
+"type": "bullets",
+"clickable": true
+},
+"navigation": {
+"nextEl": "#main-slider__swiper-button-next",
+"prevEl": "#main-slider__swiper-button-prev"
+},
+"autoplay": {
+"delay": 5000
+}}'>
+   <!--Main Slider start-->
+ 
+<div class="swiper-wrapper">
+
+  <!-- Slide 1: Range of product -->
+  <div class="swiper-slide">
+   
+ 
+   <div class="image-layer" style="background-image: url(assets/images/backgrounds/rop3.webp); background-size: cover; background-position: center;"></div>
+
+
+
+    <div class="main-slider-shape-1 float-bob-x">
+      <img src="assets/images/shapes/main-slider-shape-1.png" alt="Decorative graphic element">
+    </div>
+
+    <div class="container py-5 slider-mobile-container" >
+      <div class="row justify-content-center text-center text-md-start">
+        <div class="col-xl-12">
+          <div class="main-slider__cont">
+            <h2 class="main-slider__title">Range <span>of Product</span></h2>
+            <p class="main-slider__text">Comprehensive care with multiple portfolio - Oral & External.</p>
+          </div>
+
+          <p class="main-img">
+            <img src="/assets/images/backgrounds/range1.png" alt="Product range background graphic" style="width: 67%;margin-top:-36px;">
+          </p>
+
+          <div class="main-slider__btn-box">
+             <a href='/our-portfolio' class="thm-btn main-slider__btn">EXPLORE</a>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2: Principles -->
+  <div class="swiper-slide">
+   
+ <div class="image-layer" style="background-image: url(assets/images/backgrounds/pb.webp); background-size: cover;  background-position: center;"></div>
+
+
+
+    <div class="main-slider-shape-1 float-bob-x">
+      <img src="assets/images/shapes/main-slider-shape-1.png" alt="Decorative graphic element">
+    </div>
+
+    <div class="container py-5">
+      <div class="row justify-content-center text-center text-md-start">
+        <div class="col-xl-12">
+          <div class="main-slider__content text-white">
+            <h2 class="main-slider__title">Allrite <span>Principles</span></h2>
+             <p class="main-slider__text"> Building trust through ethical pharmaceutical standards — the Allrite way.
+</p>
+
+            <div class="row g-4 pt-3">
+              <!-- 5 principles here -->
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="d-flex align-items-start">
+                  <div class="icon-circle me-3">
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <div>
+                    <h5>Quality Assurance</h5>
+                    <p class="text-dark" style="text-align: justify;">Ensuring the highest standards of quality and safety in every product we offer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="d-flex align-items-start">
+                  <div class="icon-circle me-3">
+                    <i class="fas fa-smile-beam"></i>
+                  </div>
+                  <div>
+                    <h5>Customer Satisfaction to Customer Delight</h5>
+                    <p class="text-dark">We emphasize customer satisfaction and in due course exceed those expectations.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="d-flex align-items-start">
+                  <div class="icon-circle me-3">
+                    <i class="fas fa-search"></i>
+                  </div>
+                   <div>
+                    <h5>Transparency</h5>
+                    <p class="text-dark" style="text-align: justify;">Operating with transparency and integrity in all our dealings, ensuring trust and reliability.</p>
+                  </div> 
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="d-flex align-items-start">
+                  <div class="icon-circle me-3">
+                    <i class="fas fa-leaf"></i>
+                  </div>
+                  <div>
+                    <h5>Sustainability</h5>
+                    <p class="text-dark">Committing to environmentally sustainable practices and ethical sourcing of materials.</p>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="d-flex align-items-start">
+                  <div class="icon-circle me-3">
+                    <i class="fas fa-hands-helping"></i>
+                  </div>
+                  <div>
+                    <h5>Empathy and Compassion</h5>
+                    <p class="text-dark">Treating every interaction with empathy, understanding, and compassion.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-slider__btn-box mt-4">
+              <a href="https://www.allrite.in/about" class="thm-btn main-slider__btn">Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: Accreditation -->
+  <div class="swiper-slide">
+    <!--<div class="image-layer" style="background-image: url(assets/images/backgrounds/c.png); background-size: cover; background-position: center;"></div>-->
+  <div class="image-layer" style="background-image: url(assets/images/backgrounds/wb3.webp); background-size: cover; background-position: center;"></div>
+
+
+    <div class="main-slider-shape-1 float-bob-x">
+      <img src="assets/images/shapes/main-slider-shape-1.png" alt="Decorative graphic element">
+    </div>
+
+    <div class="container py-5">
+      <div class="row justify-content-center text-center text-md-start">
+        <div class="col-xl-12">
+          <div class="main-slider__cont">
+            <h2 class="main-slider__title">Accreditation</h2>
+            <p class="main-slider__text"> WHO-GMP Certified Third-Party Pharma Manufacturer in India.
+
+</p>
+              <div class="main-img text-center">
+          
+          
+             
+                    <img src="/assets/images/backgrounds/cp5.png"
+     alt="Allrite manufacturing facility background"
+     class="slider-mobile-img accreditation-logo"
+     loading="lazy">
+          </div>
+            <div class="main-slider__btn-box">
+              <a href='/accreditation' class="thm-btn main-slider__btn">Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4: Journey -->
+  <div class="swiper-slide">
+   
+  <div class="image-layer" style="background-image: url('/assets/images/backgrounds/oj4.webp'); background-size: contain; background-repeat: no-repeat; background-position: top center;"></div> 
+
+
+    <div class="main-slider-shape-1 float-bob-x">
+      <img src="assets/images/shapes/main-slider-shape-1.png" alt="Decorative graphic element">
+    </div>
+
+    <div class="container py-5">
+      <div class="row justify-content-center text-center text-md-start">
+        <div class="col-xl-12">
+          <div class="main-slider__content">
+            <h2 class="main-slider__title">Our <span>Journey</span></h2>
+             <p class="main-slider__text">Growing trust, capacity, and quality since 2010.</p>
+            <div class="row g-4" style="text-align: left; padding: 10px;">
+              <!-- Journey items -->
+              <div class="col-md-4">
+                <div class="d-flex align-items-start mb-3">
+                  <!--<div class="journey-icon me-3"><i class="fas fa-flask"></i></div>-->
+                      <div class="journey-icon me-3"><i class="fas fa-building"></i></div>
+                  <div>
+                    <h5 class="mb-1">2010</h5>
+                    <p  class="text-dark  text-justify"><strong>Allrite Healthcare, Unit-I for Oral Liquid</strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex align-items-start mb-3">
+                  <!--<div class="journey-icon me-3"><i class="fas fa-vial"></i></div>-->
+                    <div class="journey-icon me-3"><i class="fas fa-building"></i></div>
+                  <div>
+                    <h5 class="mb-1">2016</h5>
+                    <p  class="text-dark text-justify"><strong>Allrite Pharmaceuticals, Unit-I, Block-A for External Preparations</strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex align-items-start mb-3">
+                  <!--<div class="journey-icon me-3"><i class="fas fa-capsules"></i></div>-->
+                    <div class="journey-icon me-3"><i class="fas fa-building"></i></div>
+                  <div>
+                    <h5 class="mb-1">2018</h5>
+                    <p  class="text-dark text-justify"><strong>Allrite Pharmaceuticals, Unit-I, Block-B for Oral Solid Doses</strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex align-items-start mb-3">
+                  <!--<div class="journey-icon me-3"><i class="fas fa-vials"></i></div>-->
+                    <div class="journey-icon me-3"><i class="fas fa-building"></i></div>
+                  <div>
+                    <h5 class="mb-1">2020</h5>
+                    <p  class="text-dark"><strong>Allrite Healthcare, Unit-II<br>for External Preparations</strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex align-items-start mb-3">
+                  <!--<div class="journey-icon me-3"><i class="fas fa-soap"></i></div>-->
+                    <div class="journey-icon me-3"><i class="fas fa-building"></i></div>
+                  <div>
+                    <h5 class="mb-1">2022</h5>
+                    <p  class="text-dark text-justify"><strong>Allrite Pharmaceuticals, Unit-II, Block-A for Soap</strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex align-items-start mb-3">
+                  <!--<div class="journey-icon me-3"><i class="fas fa-pills"></i></div>-->
+                    <div class="journey-icon me-3"><i class="fas fa-building"></i></div>
+                  <div>
+                    <h5 class="mb-1">2023</h5>
+                    <p  class="text-dark text-justify"><strong>Allrite Pharmaceuticals, Unit-II, Block-B for Oral Solid Doses</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-slider__btn-box mt-4">
+              <a href='/about' class="thm-btn main-slider__btn">Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+<div class="main-slider__nav">
+    <div class="swiper-button-prev" id="main-slider__swiper-button-prev">
+        <i class="icon-right-arrow"></i>
+    </div>
+
+    <div class="swiper-button-next" id="main-slider__swiper-button-next">
+        <i class="icon-right-arrow1"></i>
+    </div>
+</div>
+
+
+</div>
+</section>
+
+ 
+
+
+<!--Main Slider End-->
+
+<!--About One Start-->
+<section class="about-one"  style="margin:40px 0;>
+ 
+     <div class="about-one-bg wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms"
+    style="background-image: url(assets/images/backgrounds/de.png);">
+  </div> 
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="about-one__left">
+          <div class="about-one__img-box wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+            
+              <div>
+              
+            
+           
+           
+  
+<div class="about-video">
+    <iframe
+        src="https://www.youtube.com/embed/jDazSHOD8zU"
+        title="Allrite Group Corporate Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+    </iframe>
+</div>
+            </div>
+            
+            
+            <div class="about-one__experience">
+              <h2 class="about-one__experience-year">15+</h2>
+              <p class="about-one__experience-text">Years of <br> Experience</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xl-6">
+        <div class="about-one__right">
+          <div class="section-title text-left">
+            <div class="section-sub-title-box">
+              <p class="section-sub-title">ABOUT OUR COMPANY</p>
+              <div class="section-title-shape-1">
+                <img src="assets/images/shapes/section-title-shape-1.png" alt="Decorative section title shape">
+              </div>
+              <div class="section-title-shape-2">
+                <img src="assets/images/shapes/section-title-shape-2.png" alt="Decorative section title shape">
+              </div>
+           
+          </div>
+            <h1 class="section-title__title">Welcome to Allrite Group </h1>
+    <p class="about-one__text-1" style="color:#16243D;">
+           formerly known as Allkind Healthcare
+          </p>
+          </div>
+
+          <p class="about-one__text-1">
+    Trusted Pharmaceutical, Cosmetic & Ayush Manufacturer in India
+          </p>
+
+        
+<p class="about-one__text-2">
+Allrite Group, formerly known as Allkind Healthcare, is a trusted pharmaceutical, cosmetic, and Ayush manufacturer in India. With GMP-certified facilities in Baddi and a dedicated team, we deliver high-quality, affordable products while ensuring excellence, compliance, and customer satisfaction.
+</p>
+
+
+       
+          <div class="about-one__why-choose-us" >
+  <p class="about-one__text-1" style="margin-top: 10px; text-align:justify;">
+    Why Choose Us:
+          </p>
+  <ul class="list-unstyled about-one__points">
+    <li>
+      <div class="icon"><i class="fa fa-check"></i></div>
+      <div class="text"><p>State-of-the-Art Manufacturing Facilities.</p></div>
+    </li>
+    <li>
+      <div class="icon"><i class="fa fa-check"></i></div>
+      <div class="text"><p>Four Dedicated F&D Sections.</p></div>
+    </li>
+    <li>
+      <div class="icon"><i class="fa fa-check"></i></div>
+      <div class="text"><p>Committed & Qualified Team.</p></div>
+    </li>
+    <li>
+      <div class="icon"><i class="fa fa-check"></i></div>
+      <div class="text"><p>Superior Quality Production.</p></div>
+    </li>
+    <li>
+      <div class="icon"><i class="fa fa-check"></i></div>
+      <div class="text"><p>On-Time Delivery.</p></div>
+    </li>
+  </ul>
+</div> 
+
+
+          <div class="about-one__btn-call">
+            <div class="about-one__btn-box">
+              <a href="/about" class="thm-btn about-one__btn">Discover More</a>
+            </div>
+            <div class="about-one__call">
+              <div class="about-one__call-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="about-one__call-content">
+                
+                <a href="tel:+919317039330">+91-9317039330</a>
+                <p>Call Us Now</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!--About One End-->
+
+
+<section class="services-one" >
+
+<div class="services-one__top custom-services-top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 text-center custom-services-col">
+                <div class="services-one__top-left">
+                    <div class="section-title">
+                        <div class="section-sub-title-box">
+                            <p class="section-sub-title">WHAT WE DO FOR YOU!</p>
+
+                            <div class="section-title-shape-1">
+                                <img src="assets/images/shapes/section-title-shape-1.png" 
+                                     alt="Decorative section title shape" 
+                                     loading="lazy">
+                            </div>
+
+                            <div class="section-title-shape-2">
+                                <img src="assets/images/shapes/section-title-shape-2.png" 
+                                     alt="Decorative section title shape" 
+                                     loading="lazy">
+                            </div>
+                        </div>
+
+                        <h2 class="custom-services-heading">
+                            Get Reliable Pharmaceutical Manufacturing Services for Your Business
+                        </h2>
+
+                        <p class="about-one__text-2 custom-services-text">
+                            At <strong>Allrite Group</strong>, we go beyond manufacturing — we deliver trusted cosmetic & ayush solutions tailored to your business needs. Our commitment is rooted in three core promises: 
+                            Customer Satisfaction, Quality Products, and Timely Delivery.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <!-- ───────────  SERVICE CARDS  ─────────── -->
+    <div class="services-one__bottom">
+        <div class="services-one__container">
+            <div class="row g-4 mt-2">
+
+                <!-- Card 1 -->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="feature-one__single" style="background-image:url('assets/images/features/cus.jpg');">
+                        <div class="feature-one__single-inner">
+                            <div class="feature-one__icon">
+                                <!-- icon 1 -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.49 3.49 0 0 0 8 11.5a3.49 3.49 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.49 4.49 0 0 1 8 12.5a4.49 4.49 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.33 6.552 8 6 8s-1-.67-1-1.5S5.448 5 6 5s1 .67 1 1.5m4 0c0 .83-.448 1.5-1 1.5s-1-.67-1-1.5S9.448 5 10 5s1 .67 1 1.5"/>
+                                </svg>
+                            </div>
+                           <h3 class="feature-one__title">
+    <a href="https://www.allrite.in/ourclient">Customer Satisfaction</a>
+</h3>
+                            <p class="feature-one__text">
+                             <strong> Putting Customers First</strong><br>
+                               Customer satisfaction has always been at the heart of Allrite Group. We believe in building long-term partnerships by listening to our clients and responding to their unique requirements. Our dedicated team ensures every client receives personalized support and hassle-free service.
+
+                            </p>
+                            <!--<a href="#" class="feature-one__more">VIEW MORE ></a>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="feature-one__single" style="background-image:url('assets/images/features/cus2.jpg');">
+                        <div class="feature-one__single-inner">
+                            <div class="feature-one__icon">
+                                <!-- icon 2 -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.858 2.929 2.929 0 0 1 0 5.858z"/>
+                                </svg>
+                            </div>
+                           <h3 class="feature-one__title">
+    <a href="https://www.allrite.in/our-portfolio">Quality Products</a>
+</h3>
+                            <p class="feature-one__text">
+                               <strong>Quality You Can Trust</strong><br>
+We stand behind the quality of every product we manufacture. From raw materials to finished formulations, our GMP-certified processes ensure that you receive only top-notch, compliant pharmaceutical, cosmetic & ayush products for your healthcare business.
+
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="feature-one__single" style="background-image:url('assets/images/features/cus6.png');">
+                        <div class="feature-one__single-inner">
+                            <div class="feature-one__icon">
+                                <!-- icon 3 -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-8.5.5A.5.5 0 0 0 8 8V2a.5.5 0 0 0-1 0v5.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1H8z"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-one__title">
+    <a href="https://www.allrite.in/manufacturing-facilities">Timely Delivery</a>
+</h3>
+                            <p class="feature-one__text"  >
+                               <strong> On-Time, Every Time</strong><br>
+We understand that in the pharmaceutical industry, timely delivery is crucial. Our streamlined supply chain, strategic location in Baddi, and strong logistics network ensure that your orders reach you promptly and efficiently, every time.
+
+                            </p>
+                           
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.row -->
+        </div>
+    </div>
+</section>
+<!-- ====================  SERVICES ONE END  ==================== -->
+
+<!--Services One End-->
+<section class="py-3 bg-light" style="margin-top: -106px;">
+    <div class="container px-4" style="margin-top: 107px;">
+        <div class="text-center mb-5">
+           <h2 class="h2 fw-bold text-dark">Our Mission & Vision</h2>
+            <div class="d-flex justify-content-center mt-3">
+                <span class="bg-primary" style="height: 4px; width: 64px;"></span>
+            </div>
+        </div>
+
+        <div class="row justify-content-center g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm transition">
+                    <img src="assets/images/services/mis.jpeg" alt="Our Mission" class="card-img-top" style="height: 256px; object-fit: cover;">
+                    <div class="card-body p-4">
+                        <h3 class="h4 fw-semibold text-dark mb-3">Mission Statement</h3>
+                        <p class="text-muted">
+                            Mission “FOR YOU” express itself that we are working to provide total customer satisfaction by our SERVICE and QUALITY.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm transition">
+                    <img src="assets/images/services/vis.jpeg" alt="Our Vision" class="card-img-top" style="height: 256px; object-fit: cover;">
+                    <div class="card-body p-4">
+                        <h3 class="h4 fw-semibold text-dark mb-3">Vision Statement</h3>
+                        <p class="text-muted">
+                            “Healthcare for all” through the right people and the right products.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Services One Start-->
+<section class="services-one" style="margin-top: 0; padding-top: 0;" >
+    <div class="services-one__top">
+        <div class="container">
+            <div class="row">
+               
+                  <div class="col-12 col-md-10 col-lg-12 text-center">
+                    <div class="services-one__top-left">
+                        <div class="section-title text-left"  >
+                       
+                            <div class="section-sub-title-box">
+                                <p class="section-sub-title">Our Products</p>
+                                <div class="section-title-shape-1">
+                                    <img src="assets/images/shapes/section-title-shape-1.png" alt="Decorative section title shape">
+                                </div>
+                                <div class="section-title-shape-2">
+                                    <img src="assets/images/shapes/section-title-shape-2.png" alt="Decorative section title shape">
+                                </div>
+                            </div>
+                            <h2>Discover Our Comprehensive  Product Range</h2>
+
+ <p class="about-one__text-2"style= "text-align: left; text-align:justify;">
+                              At <strong>Allrite Group</strong>, we deliver a wide range of oral and external pharmaceutical formulations, produced under stringent GMP and GLP-certified processes. From tablets and capsules to liquids, sachets, soaps, external and cosmetic lotions — we meet diverse healthcare demands with scale and quality. </p>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services-one__bottom" style="margin-top: -13px;  text-align:justify;" >
+        <div class="services-one__container">
+            <div class="row">
+                <!--Services One Single Start-->
+              
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+    <div class="services-one__single" style="display: flex; flex-direction: column; justify-content: space-between; height: 500px; padding: 15px; border: 1px solid #eee; border-radius: 6px; background-color: #fff; box-sizing: border-box;">
+        
+        <div class="service-one__img">
+          
+              <img src="assets/images/services/tablets.jpg" alt="Tablets">
+        </div>
+
+<div class="service-one__content" style="flex: 1; display: flex; flex-direction: column; margin-top: 15px;">
+  <a href="https://www.allrite.in/Oral-Solid-Dosage">
+    <div class="services-one__icon" 
+         style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 6px; background-color: #015FC9; transition: background-color 0.3s ease;"
+         onmouseover="this.style.backgroundColor='#ffffff'; this.querySelector('img').style.filter='invert(35%) sepia(100%) saturate(5000%) hue-rotate(200deg)';"
+         onmouseout="this.style.backgroundColor='#007BFF'; this.querySelector('img').style.filter='invert(1)';">
+        
+        
+         <img src="/assets/images/icon/tblets.png" alt="Sachet" width="32" height="32" style="filter: invert(1); transition: filter 0.3s ease;">
+    </div>
+</a>
+    <h2 class="service-one__title"><a href="https://www.allrite.in/Oral-Solid-Dosage">Tablets</a></h2>
+    <p class="service-one__text">
+        Manufacturing capacity over 1.2 billion tablets monthly, adhering to strict GMP and GLP standards to ensure precision, safety, and quality.
+    </p>
+</div>
+
+
+    </div>
+</div>
+
+                <!--Services One Single End-->
+             
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+    <div class="services-one__single" style="display: flex; flex-direction: column; justify-content: space-between; height: 500px; padding: 15px; border: 1px solid #eee; border-radius: 6px; background-color: #fff; box-sizing: border-box;">
+        
+        <div class="service-one__img">
+         
+                 <img src="assets/images/services/cpp.jpg" alt="Capsules"> 
+              
+        </div>
+
+       
+        <div class="service-one__content" style="flex: 1; display: flex; flex-direction: column; margin-top: 15px;">
+          <a href="https://www.allrite.in/Oral-Solid-Dosage">
+    <div class="services-one__icon" 
+         style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 6px; background-color:  #015FC9; transition: background-color 0.3s ease;"
+         onmouseover="this.style.backgroundColor='#ffffff'; this.querySelector('img').style.filter='invert(35%) sepia(100%) saturate(5000%) hue-rotate(200deg)';"
+         onmouseout="this.style.backgroundColor='#007BFF'; this.querySelector('img').style.filter='invert(1)';">
+        
+        <img src="/assets/images/icon/capsules.png" alt="Capsules" width="32" height="32" style="filter: invert(1); transition: filter 0.3s ease;">
+    </div>
+    </a>
+
+    <h2 class="service-one__title"><a href="https://www.allrite.in/Oral-Solid-Dosage">Capsules</a></h2>
+    <p class="service-one__text">
+        Manufacturing capacity over 200 million capsules each month with advanced equipment and controlled processes for consistent dosing and reliability.
+    </p>
+</div>
+
+
+    </div>
+</div>
+
+                <!--Services One Single End-->
+              
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+    <div class="services-one__single" style="display: flex; flex-direction: column; justify-content: space-between; height: 500px; padding: 15px; border: 1px solid #eee; border-radius: 6px; background-color: #fff; box-sizing: border-box;">
+        
+        <div class="service-one__img">
+            <img src="assets/images/services/oral 1.png" alt="Oral Liquids">
+        </div>
+
+       
+        <div class="service-one__content" style="flex: 1; display: flex; flex-direction: column; margin-top: 15px;">
+          <a href="https://www.allrite.in/liquid-oral">
+    <div class="services-one__icon" 
+         style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 6px; background-color:  #015FC9; transition: background-color 0.3s ease;"
+         onmouseover="this.style.backgroundColor='#ffffff'; this.querySelector('img').style.filter='invert(35%) sepia(100%) saturate(5000%) hue-rotate(200deg)';"
+         onmouseout="this.style.backgroundColor='#007BFF'; this.querySelector('img').style.filter='invert(1)';">
+        
+        <img src="/assets/images/icon/drop.png" alt="Oral Liquids" width="32" height="32" style="filter: invert(1); transition: filter 0.3s ease;">
+    </div>
+</a>
+    <h2 class="service-one__title"><a href="https://www.allrite.in/liquid-oral">Oral Liquids</a></h2>
+    <p class="service-one__text">
+        Manufacturing capacity over 15 million oral liquid per month supported by a robust purified water system.
+    </p>
+</div>
+
+
+    </div>
+</div>
+
+                <!--Services One Single End-->
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+    <div class="services-one__single" style="display: flex; flex-direction: column; justify-content: space-between; height: 500px; padding: 15px; border: 1px solid #eee; border-radius: 6px; background-color: #fff; box-sizing: border-box;">
+        
+        <div class="service-one__img">
+            <img src="assets/images/services/ointment.jpg" alt="Ointments">
+        </div>
+
+        
+        <div class="service-one__content" style="flex: 1; display: flex; flex-direction: column; margin-top: 15px;">
+          <a href="https://www.allrite.in/external-preparations">
+    <div class="services-one__icon" 
+         style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 6px; background-color:  #015FC9; transition: background-color 0.3s ease;"
+         onmouseover="this.style.backgroundColor='#ffffff'; this.querySelector('img').style.filter='invert(35%) sepia(100%) saturate(5000%) hue-rotate(200deg)';"
+         onmouseout="this.style.backgroundColor='#007BFF'; this.querySelector('img').style.filter='invert(1)';">
+        
+        <img src="/assets/images/icon/ointments.png" alt="Ointments" width="32" height="32" style="filter: invert(1); transition: filter 0.3s ease;">
+    </div>
+    </a>
+
+    <h2 class="service-one__title"><a href="https://www.allrite.in/external-preparations">Ointments</a></h2>
+    <p class="service-one__text">
+        Our cutting-edge Unit-I Block A facility includes 8 meticulously designed manufacturing areas.
+    </p>
+</div>
+
+
+    </div>
+</div>
+
+                <!--Services One Single End-->
+                <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+    <div class="services-one__single" style="display: flex; flex-direction: column; justify-content: space-between; height: 500px; padding: 15px; border: 1px solid #eee; border-radius: 6px; background-color: #fff; box-sizing: border-box;">
+        
+        <div class="service-one__img">
+            <img src="assets/images/services/sachet.jpg" alt="Sachets">
+        </div>
+
+        
+        <div class="service-one__content" style="flex: 1; display: flex; flex-direction: column; margin-top: 15px;">
+           <a href="https://www.allrite.in/Sachets">
+    <div class="services-one__icon" 
+         style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 6px; background-color:  #015FC9; transition: background-color 0.3s ease;"
+         onmouseover="this.style.backgroundColor='#ffffff'; this.querySelector('img').style.filter='invert(35%) sepia(100%) saturate(5000%) hue-rotate(200deg)';"
+         onmouseout="this.style.backgroundColor='#007BFF'; this.querySelector('img').style.filter='invert(1)';">
+        
+        <img src="/assets/images/icon/sachet.png" alt="Sachet" width="32" height="32" style="filter: invert(1); transition: filter 0.3s ease;">
+    </div>
+</a>
+    <h2 class="service-one__title"><a href="https://www.allrite.in/Sachets">Sachets</a></h2>
+    <p class="service-one__text">
+        Manufacturing capacity over 7.5 million sachets monthly, providing convenient single-dose packaging for powders and granules.
+    </p>
+</div>
+
+
+    </div>
+</div>
+
+                <!--Services One Single End-->
+                <!--Services One Single Start-->
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="600ms">
+    <div class="services-one__single" style="display: flex; flex-direction: column; justify-content: space-between; height: 500px; padding: 15px; border: 1px solid #eee; border-radius: 6px; background-color: #fff; box-sizing: border-box;">
+        
+        <div class="service-one__img">
+          
+              <img src="assets/images/services/soapp.webp" alt="Soaps"> 
+        </div>
+
+        
+<div class="service-one__content" style="flex: 1; display: flex; flex-direction: column; margin-top: 15px;">
+  <a href="https://www.allrite.in/Soap">
+    <div class="services-one__icon" 
+         style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 6px; background-color:  #015FC9; transition: background-color 0.3s ease;"
+         onmouseover="this.style.backgroundColor='#ffffff'; this.querySelector('img').style.filter='invert(35%) sepia(100%) saturate(5000%) hue-rotate(200deg)';"
+         onmouseout="this.style.backgroundColor='#007BFF'; this.querySelector('img').style.filter='invert(1)';">
+        
+        <img src="/assets/images/icon/soap.png" alt="Soaps" width="32" height="32" style="filter: invert(1); transition: filter 0.3s ease;">
+    </div>
+    </a>
+
+    <h2 class="service-one__title"><a href="https://www.allrite.in/Soap">Soaps</a></h2>
+    <p class="service-one__text">
+        Manufacturing capacity over 18 million medicated, cosmetic and ayush soaps at facility crafted to meet the highest manufacturing standards.
+    </p>
+</div>
+
+    </div>
+</div>
+
+                <!--Services One Single End-->
+              
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="700ms">
+    <div class="services-one__single" style="display: flex; flex-direction: column; justify-content: space-between; height: 500px; padding: 15px; border: 1px solid #eee; border-radius: 6px; background-color: #fff; box-sizing: border-box;">
+        
+        <div class="service-one__img">
+            <img src="assets/images/services/lotion.jpg" alt="Lotions">
+        </div>
+
+        
+        <div class="service-one__content" style="flex: 1; display: flex; flex-direction: column; margin-top: 15px;">
+          <a href="https://www.allrite.in/cosmetic">
+    <div class="services-one__icon" 
+         style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 6px; background-color:  #015FC9; transition: background-color 0.3s ease;"
+         onmouseover="this.style.backgroundColor='#ffffff'; this.querySelector('img').style.filter='invert(35%) sepia(100%) saturate(5000%) hue-rotate(200deg)';"
+         onmouseout="this.style.backgroundColor='#007BFF'; this.querySelector('img').style.filter='invert(1)';">
+        
+        <img src="/assets/images/icon/cosmetic.png" alt="Cosmetic" width="32" height="32" style="filter: invert(1); transition: filter 0.3s ease;">
+    </div>
+    </a>
+
+    <h2 class="service-one__title"><a href="https://www.allrite.in/cosmetic">Cosmetic</a></h2>
+    <p class="service-one__text">
+        Dermatological lotions produced with GMP and GLP standards.
+    </p>
+</div>
+
+
+    </div>
+</div>
+</div>
+
+
+                <!--Services One Single End-->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Why Choose One Start-->
+<section class="why-choose-one"  style="height: 1100px;">
+<div class="why-choose-one-shape-1"
+style="background-image: url(assets/images/shapes/why-choose-one-shape-1.png);"></div>
+<div class="why-choose-one-shape-2 float-bob-y">
+<img src="assets/images/shapes/why-choose-one-shape-2.png" alt="Decorative “Why Choose Us” shape">
+</div>
+<div class="why-choose-one-shape-3 float-bob-x">
+<img src="assets/images/shapes/why-choose-one-shape-3.png" alt="Decorative “Why Choose Us” shape">
+</div>
+<div class="why-choose-one-shape-4 float-bob-y">
+<img src="assets/images/shapes/why-choose-one-shape-4.png" alt="Decorative “Why Choose Us” shape">
+</div>
+<div class="why-choose-one-shape-5 float-bob-y">
+<img src="assets/images/shapes/why-choose-one-shape-5.png" alt="Decorative “Why Choose Us” shape">
+</div>
+<div class="why-choose-one-shape-6 float-bob-x">
+<img src="assets/images/shapes/why-choose-one-shape-6.png" alt="Decorative “Why Choose Us” shape">
+</div>
+
+
+
+<div class="why-choose-one-img wow slideInRight " data-wow-delay="100ms" data-wow-duration="2500ms">
+
+
+
+             <img src="assets/images/resources/wc4.png" 
+     alt="Allrite WHO-GMP certification badge"
+     loading="lazy"
+     style=" border-top-left-radius:50px; 
+            border-bottom-left-radius:50px; 
+             max-width: 81%; height: auto; display: block;">
+
+
+</div>
+<div class="container" style="padding-top: 0px;">
+<div class="row">
+<div class="col-xl-6 col-lg-7">
+<div class="why-choose-one__left" style="margin-top: -79px;">
+<div class="section-title text-left">
+<div class="section-sub-title-box">
+<p class="section-sub-title">Why choose </p>
+<div class="section-title-shape-1">
+<img src="assets/images/shapes/section-title-shape-3.png" alt="Decorative section divider shape">
+</div>
+<div class="section-title-shape-2">
+<img src="assets/images/shapes/section-title-shape-4.png" alt="Decorative section divider shape">
+</div>
+</div>
+<h2 class="section-title__title">Why Choose Allrite Group</h2>
+</div>
+
+<p class="why-choose-one__text" style="text-align: justify;">
+  <strong>Your Trusted Partner in Pharma, Cosmetic & Ayush Manufacturing</strong><br><br>
+  Choosing Allrite Group means partnering with a company dedicated to delivering excellence, reliability, and innovation in every product and service. At Allrite, we believe in doing things the right way — the right quality, the right service, and the right solutions for our clients. Our name reflects our unwavering commitment to providing GMP  solutions that meet the highest standards and exceed expectations. Here’s why the name “Allrite” truly defines who we are:<br><br>
+  <strong>What “Allrite” Stands For</strong><br>
+  <strong>All:</strong> The word “All” represents our dedication to serving everyone. We believe healthcare should be accessible to all, and our inclusive approach reflects this promise.<br>
+  <strong>Right:</strong> We do things the right way — prioritizing quality, integrity, and precision at every stage, from product development to final delivery. Our processes ensure that every partner gets consistent, reliable results.<br>
+  <strong>Innovation:</strong> Innovation is at the core of Allrite Group. We continuously embrace cutting-edge technologies and advanced manufacturing practices to stay ahead in the market and deliver unmatched value to our partners.<br>
+  <strong>Trust:</strong> Trust is the foundation of our client relationships. With Allrite, you can expect complete transparency, reliability, and a true commitment to your growth and success.<br>
+  <strong>Excellence:</strong> We strive for excellence in every product and project. Our team works relentlessly to ensure that our pharma manufacturing services and solutions meet the highest industry standards.<br>
+  <strong>Our Promise:</strong> In essence, Allrite stands for doing things right, delivering innovative solutions, and building lasting partnerships rooted in trust and excellence. we want strong is avoid</p><div class="about-one__btn-call">
+            <div class="about-one__btn-box">
+              <a href="/contact" class="thm-btn about-one__btn">Partner With Allrite</a>
+            </div>
+            
+            <div class="about-one__call" style="color: #fff;">
+  <div class="about-one__call-icon" style="color: #fff;">
+    <i class="fas fa-phone"></i>
+  </div>
+  <div class="about-one__call-content" style="color: #fff;">
+    <a href="tel:+919317039330" style="color: #fff; text-decoration: none;">+91-9317039330</a>
+    <p style="color: #fff;">Call Us Today</p>
+  </div>
+</div>
+
+          </div> 
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!--Why Choose One End-->
+
+<section id="customers" class="customers-section"
+    onclick="window.location='https://www.allrite.in/ourclient';">
+
+    <div class="container-fluid px-4">
+        <div class="section-title text-center">
+            <h3 class="customers-title">Our Trusted Partners</h3>
+        </div>
+
+        <div class="customers-logos-wrapper">
+            <div class="marquee-track">
+                                    <img src="/assets/images/customers/a.png"
+                         class="customer-logo"
+                         alt="Client A Logo">
+                                    <img src="/assets/images/customers/leeford.png"
+                         class="customer-logo"
+                         alt="Leeford Logo">
+                                    <img src="/assets/images/customers/himalaya.png"
+                         class="customer-logo"
+                         alt="Himalaya Logo">
+                                    <img src="/assets/images/customers/bobmay.png"
+                         class="customer-logo"
+                         alt="Bobmay Logo">
+                                    <img src="/assets/images/customers/godrage-logo.png"
+                         class="customer-logo"
+                         alt="Godrage Logo">
+                                    <img src="/assets/images/customers/dabour.png"
+                         class="customer-logo"
+                         alt="Dabur Logo">
+                                    <img src="/assets/images/customers/piramal.png"
+                         class="customer-logo"
+                         alt="Piramal Logo">
+                                    <img src="/assets/images/customers/82e.png"
+                         class="customer-logo"
+                         alt="82E Logo">
+                                    <img src="/assets/images/customers/na1.png"
+                         class="customer-logo"
+                         alt="na Logo">
+                                    <img src="/assets/images/customers/galpha.png"
+                         class="customer-logo"
+                         alt="Galpha Logo">
+                                    <img src="/assets/images/customers/medplus.svg"
+                         class="customer-logo"
+                         alt="MedPlus Logo">
+                                    <img src="/assets/images/customers/healing.webp"
+                         class="customer-logo"
+                         alt="Healing Pharma Logo">
+                                    <img src="/assets/images/customers/morepen.avif"
+                         class="customer-logo"
+                         alt="Morepen Logo">
+                                    <img src="/assets/images/customers/emami.png"
+                         class="customer-logo"
+                         alt="Emami Logo">
+                                    <img src="/assets/images/customers/ap1.png"
+                         class="customer-logo"
+                         alt="Ajanta Logo">
+                                    <img src="/assets/images/customers/appolo.svg"
+                         class="customer-logo"
+                         alt="Apollo Logo">
+                
+                                    <img src="/assets/images/customers/a.png"
+                         class="customer-logo"
+                         alt="Client A Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/leeford.png"
+                         class="customer-logo"
+                         alt="Leeford Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/himalaya.png"
+                         class="customer-logo"
+                         alt="Himalaya Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/bobmay.png"
+                         class="customer-logo"
+                         alt="Bobmay Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/godrage-logo.png"
+                         class="customer-logo"
+                         alt="Godrage Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/dabour.png"
+                         class="customer-logo"
+                         alt="Dabur Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/piramal.png"
+                         class="customer-logo"
+                         alt="Piramal Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/82e.png"
+                         class="customer-logo"
+                         alt="82E Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/na1.png"
+                         class="customer-logo"
+                         alt="na Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/galpha.png"
+                         class="customer-logo"
+                         alt="Galpha Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/medplus.svg"
+                         class="customer-logo"
+                         alt="MedPlus Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/healing.webp"
+                         class="customer-logo"
+                         alt="Healing Pharma Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/morepen.avif"
+                         class="customer-logo"
+                         alt="Morepen Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/emami.png"
+                         class="customer-logo"
+                         alt="Emami Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/ap1.png"
+                         class="customer-logo"
+                         alt="Ajanta Logo"
+                         aria-hidden="true">
+                                    <img src="/assets/images/customers/appolo.svg"
+                         class="customer-logo"
+                         alt="Apollo Logo"
+                         aria-hidden="true">
+                            </div>
+        </div>
+    </div>
+</section>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+    });
+</script>
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://allrite.in/",
+    "name": "Allrite Group - Third Party Pharma & Cosmetic Manufacturer India",
+    "description": "Top WHO GMP certified third party pharma manufacturer in India, specializing in oral solid, liquid oral, external preparations, and cosmetic contract manufacturing from Baddi, HP.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://allrite.in/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Allrite Group",
+    "url": "https://allrite.in/",
+    "logo": "https://allrite.in/assets/images/resources/logo1.png",
+    "description": "WHO GMP certified Third Party Pharmaceutical, Ayurvedic, and Cosmetic Contract Manufacturing Company based in Baddi, Himachal Pradesh, India.",
+    "sameAs": [
+      "https://www.linkedin.com/company/allritegroup",
+      "https://www.facebook.com/AllriteGroup",
+      "https://x.com/AllriteGroup",
+      "https://www.instagram.com/allritegroup/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot No. 114-A, EPIP, Phase-II, Village Thana, Baddi, Dist. Solan",
+      "addressLocality": "Baddi",
+      "addressRegion": "Himachal Pradesh",
+      "postalCode": "173205",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9805550309",
+      "contactType": "Sales and Manufacturing Enquiries"
+    }
+  }
+]
+</script>
+
+
+        <!-- ===================== Global CTA ===================== -->
+<section class="global-cta py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+                <h2 class="fw-bold mb-3" style="color: #fff;">
+                    Ready to Scale Your Production?
+                </h2>
+
+                <p class="mb-0">
+                    Partner with <strong>Allrite Group</strong> for reliable,
+                    compliant, and cost-effective contract manufacturing.
+                    Let's bring your next product to life.
+                </p>
+            </div>
+
+            <div class="col-lg-4 text-center text-lg-end">
+                <a href="https://www.allrite.in/contact" class="btn btn-light px-4  me-2">
+                    Contact Our Manufacturing Experts
+                </a>
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer" style="background-color: #0d3368; color: white; font-family: 'Rajdhani', sans-serif;">
+    <div class="container py-5">
+        <div class="row">
+
+
+            <!-- About Us -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <!-- Logo/Image -->
+    <div class="mb-3">
+    <a href="https://www.allrite.in">
+        <img src="/assets/images/fl.png"
+             alt="Allrite Healthcare Logo"
+             class="img-fluid"
+             style="max-width:180px;">
+    </a>
+</div>
+                <h4 style="color: #01b4f8;">About Allrite Healthcare</h4>
+                <p style="font-size: 14px;">
+                    Allrite Group stands at the forefront of India’s dynamic manufacturing landscape, continuously
+                    evolving and expanding to meet the growing demands of the pharmaceutical industry.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h4 style="color: #01b4f8;">Quick Links</h4>
+                <ul class="list-unstyled" style="line-height: 1.8;">
+                    <li><a href="/" style="color: white;">» Home</a></li>
+                    <li><a href="https://www.allrite.in/about" style="color: white;">» About us</a></li>
+                    <!--<li><a href="#" style="color: white;">» Our Portfolio</a></li>-->
+                    <!--<li><a href="#" style="color: white;">» Manufacturing Facilities</a></li>-->
+                    <li><a href="https://www.allrite.in/ourclient" style="color: white;">» Our Valuable Clients</a></li>
+                    <li><a href="https://www.allrite.in/our-policies" style="color: white;">» Our Policies</a></li>
+                    <li><a href="https://www.allrite.in/life" style="color: white;">» Life at Allrite</a></li>
+                    <li>
+                        <a href="https://www.allrite.in/accreditation" style="color: white;">» Accreditation</a>
+                    </li>
+                    <li><a href="https://www.allrite.in/contact" style="color: white;">» Contact Us</a></li>
+                </ul>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h4 style="color: #01b4f8;">Contact Info</h4>
+
+                <p style="font-size: 14px;">
+                    <strong>Manufacturing Unit:</strong><br>
+                    Plot No. 114-A, EPIP, Phase-II,<br>
+                    Village Thana, Baddi, Dist. Solan,<br>
+                    Himachal Pradesh - 173205
+                </p>
+
+                <p style="font-size: 14px; margin-top: 15px;">
+                    <strong>Corporate Office:</strong><br>
+                    B-206, 2nd Floor,<br>
+                    Elante Office Complex,<br>
+                    Chandigarh - 160002
+                </p>
+
+                <p style="font-size: 14px;">
+                    <strong style="color: #01b4f8;">+91-9317039330</strong>
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div style="background-color: #000; padding: 15px 0;">
+        <div class="container text-center text-white">
+            <p style="margin: 0; font-size: 14px;">
+                Privacy Policy | Terms & Conditions <br>
+                Copyright © 2026 Allrite Group, All Rights Reserved. Design & Developed By <a
+                    href="https://applashsolution.com/" style="color: #015FC9;">Applash Solution</a>
+            </p>
+            <div class="mt-2">
+                <a href="https://www.facebook.com/profile.php?id=61577104462937" class="text-white me-3"><i
+                        class="fab fa-facebook"></i></a>
+                
+                <a href="https://x.com/AllriteGroup" class="text-white me-3" target="_blank">
+                    <span style="font-size:18px;font-weight:bold;">𝕏</span>
+                </a>
+                <a href="https://www.instagram.com/allritegroup/" class="text-white me-3"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@AllriteHealthcare" class="text-white me-3"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/allritegroup" class="text-white"><i
+                        class="fab fa-linkedin"></i></a>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".lazy-bg").forEach(function (el) {
+            let bg = el.getAttribute("data-bg");
+            if (bg) {
+                el.style.backgroundImage = "url('" + bg + "')";
+            }
+        });
+    });
+</script>
+
+<style>
+    /* Global CTA */
+    .global-cta {
+        background: linear-gradient(135deg, #015FC9, #0d3368);
+        color: #fff;
+    }
+
+    .global-cta h2 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .global-cta p {
+        font-size: 18px;
+        line-height: 1.8;
+        opacity: .95;
+    }
+
+    .global-cta .btn-light {
+        background: #fff;
+        color: #015FC9;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: .3s;
+    }
+
+    .global-cta .btn-light:hover {
+        background: #015FC9;
+        color: #fff;
+    }
+
+    .global-cta .btn-outline-light {
+        border-radius: 50px;
+        font-weight: 600;
+        transition: .3s;
+    }
+
+    .global-cta .btn-outline-light:hover {
+        background: #fff;
+        color: #015FC9;
+    }
+
+    @media(max-width:768px) {
+
+        .global-cta {
+            text-align: center;
+        }
+
+        .global-cta h2 {
+            font-size: 30px;
+        }
+
+        .global-cta p {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .global-cta .btn {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+    }
+</style>    </div>
+
+    <script src="/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+<script src="/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendors/jarallax/jarallax.min.js"></script>
+<script src="/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+<script src="/assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+<script src="/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+<script src="/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="/assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+<script src="/assets/vendors/nouislider/nouislider.min.js"></script>
+<script src="/assets/vendors/odometer/odometer.min.js"></script>
+<script src="/assets/vendors/swiper/swiper.min.js"></script>
+<script src="/assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+<script src="/assets/vendors/wnumb/wNumb.min.js"></script>
+<script src="/assets/vendors/wow/wow.js"></script>
+<script src="/assets/vendors/isotope/isotope.js"></script>
+<script src="/assets/vendors/countdown/countdown.min.js"></script>
+<script src="/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="/assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+<script src="/assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="/assets/vendors/vegas/vegas.min.js"></script>
+<script src="/assets/vendors/jquery-ui/jquery-ui.js"></script>
+<script src="/assets/vendors/timepicker/timePicker.js"></script>
+<script src="/assets/vendors/circleType/jquery.circleType.js"></script>
+<script src="/assets/vendors/circleType/jquery.lettering.min.js"></script>
+<script src="/assets/vendors/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+<script src="/assets/js/insur.js"></script>
+
+
+
+ 
+ 
+  <a href="https://wa.me/919805550309"
+   class="whatsapp-sticky"
+   target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+</body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'sg2plzcpnl509365'},{'dcenter':'sg2'},{'cp_id':'10570079'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>
+<style>
+.whatsapp-sticky{
+    position: fixed;
+    right: 15px;
+    bottom: 120px; /* thoda aur upar */
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+    transition: all .3s ease;
+    margin-right: 22px;
+}
+
+.whatsapp-sticky:hover{
+    color:#fff;
+    transform: scale(1.05);
+}
+
+@media(max-width:768px){
+    .whatsapp-sticky{
+        right: 12px;
+        bottom: 110px;
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
+</style>

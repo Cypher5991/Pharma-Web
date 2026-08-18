@@ -1,0 +1,6 @@
+{
+  "name": "Allrite UX & CRO Strategy Audit",
+  "description": "High-authority CDMO platform for Allrite Group featuring live Google Sheets product portfolio sync (370+ commercial formulations across Oral Solids and Topicals), interactive batch calculator, cleanroom tour, and fast RFP quotation drawer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

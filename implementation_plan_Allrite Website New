@@ -1,0 +1,106 @@
+# Populate Website with Marketing Creative Images
+
+The goal is to replace the generic placeholder designs and icon-only sections on the pharmaceutical CDMO website with real, authentic marketing creatives, facility photos, and machinery images provided by the user.
+
+---
+
+## User Review Required
+
+> [!IMPORTANT]
+> The marketing assets contain a wide range of images, including aerial shots of the Baddi plant, machinery close-ups, products, and lab workstations.
+> We have selected the most contextually relevant images for each page/component:
+> 
+> * **Header/Footer Logo**: `logo1.png` or `Logo_Dark Mode (2).png`
+> * **Hero / Facility Highlights**: `Plant Img.png`, `Banner_New3.png`, and `158_facility_exterior.jpg`
+> * **Facilities Page Modalities**: 
+>   * *Oral Solids (OSD)*: `151_tablet_press_machine.jpg` & `OSD_Adv.png`
+>   * *Topicals/Derma*: `146_process_vessels.jpg` & `PersonalCare1.png`
+>   * *Oral Liquids*: `90_bottle_filling_line.png` & `Oralliq_Final1.png`
+>   * *Soaps*: `Soaps_1.png` & `K_Monobar.png`
+>   * *R&D / Test Lab*: `109_laboratory_instruments.jpg`
+> * **Cleanroom Floor Explorer**: Action-oriented photos for each cleanroom zone (granulation, compression, coating, filling, packaging, lab).
+> * **About Us (Leadership & Milestones)**: Authentic leadership profile photos (`1.jpg`, `2.jpg`, `3.jpg`, `4.jpg`) from the `Profile Images` directory and historical plant images.
+> * **Quality & Analytical Lab**: Scientific instruments and lab workstations.
+
+---
+
+## Proposed Changes
+
+### Component: Asset Management
+We will copy the selected images from `C:\Users\hsnain\Downloads\marketing creatives` and its subdirectories (like `Profile Images`) into the website's `public/images/` directory. This makes them accessible from `/images/filename.png` in the React frontend.
+
+#### [NEW] Public Images Directory
+Create the folder `public/images/` and copy the following files:
+* **Logos**: `logo1.png`, `Logo_Dark Mode (2).png`
+* **Exterior & Hero**: `Plant Img.png`, `Banner_New3.png`, `158_facility_exterior.jpg`
+* **Modality Products**: `OSD_Adv.png`, `Oralliq_Final1.png`, `PersonalCare1.png`, `Soaps_1.png`, `QbD_1.png`
+* **Machines & Environment**: 
+  * `150_conical_hopper_blender.jpg` (Granulation)
+  * `151_tablet_press_machine.jpg` (Compression)
+  * `157_acg_blister_packaging_machine.jpg` (Coating/Packaging)
+  * `146_process_vessels.jpg` (Homogenization)
+  * `90_bottle_filling_line.png` (Liquid Bottling)
+  * `109_laboratory_instruments.jpg` (GLP Laboratory)
+  * `113_quality_control_station.jpg` (Quality Assurance)
+* **Leadership**: `1.jpg`, `2.jpg`, `3.jpg`, `4.jpg` (from `Profile Images` folder)
+
+---
+
+### Component: Data Models
+We will extend the data types to support optional image URLs and populate the data entries with the newly copied paths.
+
+#### [MODIFY] [types.ts](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/types.ts)
+Add an optional `imageUrl?: string` parameter to `DosageFormItem`, `DosageCategoryInfo`, `ManufacturingUnit`, and `LeadershipMember` interfaces.
+
+#### [MODIFY] [cdmoData.ts](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/data/cdmoData.ts)
+Add `imageUrl` properties pointing to the respective copied images for:
+* Each dosage form in `CDMO_CATEGORIES` (OSD, Liquids, Topicals, Soaps, R&D).
+* Each unit in `MANUFACTURING_UNITS` (Unit-I, Unit-II, Unit-III, R&D Hub).
+* Each member in `LEADERSHIP_TEAM` (using `/images/1.jpg`, `/images/2.jpg`, etc.).
+
+---
+
+### Component: UI Views
+We will update the frontend pages to render the images beautifully using Vite's static file routing.
+
+#### [MODIFY] [Header.tsx](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/components/Header.tsx)
+Replace the generic `ShieldCheck` icon with the corporate logo `/images/logo1.png` (or dark-mode counterpart).
+
+#### [MODIFY] [Footer.tsx](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/components/Footer.tsx)
+Integrate `/images/Logo_Dark Mode (2).png` for a premium, consistent branding in the footer section.
+
+#### [MODIFY] [HeroSection.tsx](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/components/HeroSection.tsx)
+Add a stunning background image layout using `Banner_New3.png` or `Plant Img.png` with overlay gradients to make it feel extremely high-end and premium.
+
+#### [MODIFY] [HomePage.tsx](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/components/pages/HomePage.tsx)
+Replace solid-colored background blocks (such as in the cleanroom virtual tour card) with background images (e.g., `/images/158_facility_exterior.jpg`).
+
+#### [MODIFY] [FacilitiesPage.tsx](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/components/pages/FacilitiesPage.tsx)
+Add Unit-specific machinery and building images to the cards of each manufacturing unit (Unit I - IV).
+
+#### [MODIFY] [AboutPage.tsx](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/components/pages/AboutPage.tsx)
+Replace text-based leadership initials with the authentic profile pictures of the leadership team, and style them in rounded cards.
+
+#### [MODIFY] [QualityPage.tsx](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/components/pages/QualityPage.tsx)
+Add images of R&D laboratory instruments (`109_laboratory_instruments.jpg`) and QA facilities (`113_quality_control_station.jpg`) next to the text segments.
+
+#### [MODIFY] [CleanroomTourModal.tsx](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/components/CleanroomTourModal.tsx)
+Incorporate zone-specific photos directly into the modal for granulation, compression, coating, homogenization, bottling, and GLP laboratories.
+
+#### [MODIFY] [DosageMatrixSection.tsx](file:///c:/Users/hsnain/.gemini/antigravity/scratch/Pharma-Website/src/components/DosageMatrixSection.tsx)
+Integrate the actual dosage category images (like `OSD_Adv.png`, `Oralliq_Final1.png`, etc.) inside each capability tab and details card.
+
+---
+
+## Verification Plan
+
+### Manual Verification
+1. Run `npm run dev` to start the local server.
+2. Check the visual display of:
+   * Corporate logos in the header and footer.
+   * Hero banner backdrop and exterior plant visuals.
+   * Cleanroom Modal Explorer image switching.
+   * Leadership avatars on the About Us page.
+   * Equipment & Laboratory highlights on Quality and Facilities pages.
+   * Product dosage forms on the Dosage Matrix component.
+3. Verify that responsiveness is intact and HMR works correctly.
