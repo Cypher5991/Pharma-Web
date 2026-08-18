@@ -19,15 +19,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenRfp, onNavigate }) =
       className="min-h-screen bg-slate-50 text-slate-900"
     >
       {/* About Hero */}
-      <div className="bg-gradient-to-r from-slate-950 via-blue-950 to-slate-900 text-white py-16 sm:py-24 border-b border-slate-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="bg-gradient-to-r from-slate-950 via-[#0B2553] to-slate-900 text-white py-12 sm:py-16 md:py-20 border-b border-slate-800 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#0284C7]/10 rounded-full blur-3xl pointer-events-none" />
         <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-400/30">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0284C7]/20 text-[#38BDF8] text-xs font-bold uppercase tracking-wider border border-[#0284C7]/30">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Company Profile & Evolution</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-['Outfit',sans-serif] tracking-tight max-w-3xl">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white font-['Outfit',sans-serif] tracking-tight max-w-3xl">
             A Legacy of Pharmaceutical Precision & High-Capacity CDMO Leadership
           </h1>
 
@@ -35,17 +35,17 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenRfp, onNavigate }) =
             Founded in 2010 as Allkind Healthcare and evolving into PharmaTech, we have grown into one of India’s most technologically advanced contract development and manufacturing organizations (CDMO). Operating across a 5-acre campus in Baddi, Himachal Pradesh with 1.4B+ monthly unit throughput.
           </p>
 
-          <div className="pt-4 flex flex-wrap items-center gap-4">
+          <div className="pt-3 flex flex-wrap items-center gap-3">
             <button
               onClick={onOpenRfp}
-              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-xl shadow-blue-600/30 transition-all flex items-center gap-2"
+              className="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#0B2553] via-[#0284C7] to-[#4EBA36] hover:opacity-95 shadow-xl shadow-[#0B2553]/30 transition-all flex items-center gap-2"
             >
               <span>Connect with Leadership & BD</span>
               <ArrowRight className="w-4 h-4" />
             </button>
             <button
               onClick={() => onNavigate('facilities')}
-              className="px-5 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-200 bg-white/10 hover:bg-white/20 border border-white/10 transition-all"
+              className="px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-200 bg-white/10 hover:bg-white/20 border border-white/10 transition-all"
             >
               Explore Manufacturing Units &rarr;
             </button>
@@ -54,15 +54,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenRfp, onNavigate }) =
       </div>
 
       {/* Metrics Strip */}
-      <div className="bg-white border-b border-slate-200 py-8 shadow-xs">
+      <div className="bg-white border-b border-slate-200 py-6 sm:py-8 shadow-xs">
         <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100">
             {KEY_COMPANY_METRICS.map((metric) => (
               <div key={metric.id} className="pt-3 md:pt-0 px-2 space-y-1">
-                <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-['Outfit',sans-serif]">
+                <div className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 font-['Outfit',sans-serif]">
                   {metric.value}
                 </div>
-                <div className="text-xs font-bold text-blue-700 uppercase tracking-wider">
+                <div className="text-xs font-bold text-[#4EBA36] uppercase tracking-wider">
                   {metric.unit}
                 </div>
                 <div className="text-xs text-slate-500 font-medium">

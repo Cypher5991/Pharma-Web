@@ -267,12 +267,12 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onOpenRfp }) => {
       transition={{ duration: 0.3 }}
       className="min-h-screen bg-slate-50 text-slate-900"
     >
-      {/* Portfolio Hero Header - Wide Screen */}
-      <div className="bg-gradient-to-r from-slate-950 via-blue-950 to-slate-900 text-white py-14 sm:py-18 border-b border-slate-800 relative overflow-hidden">
+      {/* Portfolio Hero Header */}
+      <div className="bg-gradient-to-r from-slate-950 via-[#0B2553] to-slate-900 text-white py-12 sm:py-16 border-b border-slate-800 relative overflow-hidden">
         <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-400/30">
-              <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0284C7]/20 text-[#38BDF8] text-xs font-bold uppercase tracking-wider border border-[#0284C7]/30">
+              <FileSpreadsheet className="w-3.5 h-3.5 text-[#4EBA36]" />
               <span>PharmaTech Master Product Portfolio</span>
             </div>
 
@@ -280,7 +280,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onOpenRfp }) => {
             <div className="flex items-center gap-3">
               {user ? (
                 <div className="flex items-center gap-2 bg-slate-900/90 border border-slate-700/80 px-3 py-1.5 rounded-full text-xs text-slate-300">
-                  <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#4EBA36]"></div>
                   <span className="text-white font-medium">{user.email || 'Google User'}</span>
                   <button
                     onClick={handleGoogleLogout}
