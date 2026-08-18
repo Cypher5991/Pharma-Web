@@ -20,8 +20,11 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRfp, onSelectCategory }) => {
   return (
     <section className="relative overflow-hidden bg-slate-950 text-white min-h-[620px] lg:min-h-[720px] flex items-center">
-      {/* Background Factory Video Loop (YouTube) */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      {/* Background Factory Video Loop (YouTube) & Fallback Poster */}
+      <div 
+        className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-cover bg-center"
+        style={{ backgroundImage: "radial-gradient(ellipse at top, rgba(30, 58, 138, 0.4), transparent 75%), url('/images/158_facility_exterior.jpg')" }}
+      >
         <div className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2">
           <iframe
             src="https://www.youtube.com/embed/x7i6L6cqWLY?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=x7i6L6cqWLY&playsinline=1"
@@ -32,8 +35,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRfp, onSelectCat
           ></iframe>
         </div>
         
-        {/* Lighter Gradient Overlay for video visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-slate-950/30" />
+        {/* Subtle Dark Gradient Overlay for legibility and video visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/60 to-slate-950/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20" />
       </div>
 
