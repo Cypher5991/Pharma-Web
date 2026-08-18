@@ -32,7 +32,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenRfp, onNavigate }) =
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-            Founded in 2010 as Allkind Healthcare and evolving into Allrite Group, we have grown into one of India’s most technologically advanced contract development and manufacturing organizations (CDMO). Operating across a 5-acre campus in Baddi, Himachal Pradesh with 1.4B+ monthly unit throughput.
+            Founded in 2010 as Allkind Healthcare and evolving into PharmaTech, we have grown into one of India’s most technologically advanced contract development and manufacturing organizations (CDMO). Operating across a 5-acre campus in Baddi, Himachal Pradesh with 1.4B+ monthly unit throughput.
           </p>
 
           <div className="pt-4 flex flex-wrap items-center gap-4">
@@ -95,10 +95,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenRfp, onNavigate }) =
                 Message from Mr. Vivek K. Singh
               </h2>
               <p className="text-xs font-semibold text-blue-300 uppercase tracking-wider font-mono">
-                Managing Partner & Founder, Allrite Group
+                Managing Partner & Founder, PharmaTech
               </p>
               <blockquote className="text-sm sm:text-base text-slate-200 leading-relaxed italic border-l-2 border-blue-400/50 pl-4 py-1">
-                “At Allrite Group, our journey began with a clear vision: to deliver world-class pharmaceutical and personal care contract manufacturing that bridges technological precision with uncompromised quality. We have evolved from a single oral liquid facility in 2010 to a multi-block CDMO delivering 1.4B+ units per month. Our success is built on one enduring philosophy: moving from mere customer satisfaction to genuine customer delight through transparency, scientific rigor, and compliance excellence.”
+                “At PharmaTech, our journey began with a clear vision: to deliver world-class pharmaceutical and personal care contract manufacturing that bridges technological precision with uncompromised quality. We have evolved from a single oral liquid facility in 2010 to a multi-block CDMO delivering 1.4B+ units per month. Our success is built on one enduring philosophy: moving from mere customer satisfaction to genuine customer delight through transparency, scientific rigor, and compliance excellence.”
               </blockquote>
             </div>
           </div>
@@ -112,7 +112,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenRfp, onNavigate }) =
             Our Core Values
           </span>
           <h2 className="text-3xl font-extrabold text-slate-900 font-['Outfit',sans-serif]">
-            5 Pillars of the Allrite Group Culture
+            5 Pillars of the PharmaTech Culture
           </h2>
           <p className="text-sm text-slate-600">
             Guided by principles of engineering integrity, sustainable operations, and client-first commitment.
@@ -200,7 +200,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenRfp, onNavigate }) =
               15-Year Growth Journey
             </span>
             <h2 className="text-3xl font-extrabold font-['Outfit',sans-serif]">
-              From Allkind Healthcare (2010) to Allrite Group
+              From Regional Facility (2010) to PharmaTech CDMO
             </h2>
             <p className="text-xs sm:text-sm text-slate-400">
               Key infrastructure expansions and quality milestones in Baddi.

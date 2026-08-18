@@ -301,7 +301,7 @@ export const DOSAGE_CATEGORIES: DosageCategoryInfo[] = [
 export const MANUFACTURING_UNITS: ManufacturingUnit[] = [
   {
     id: 'unit-1',
-    name: 'Allrite Unit-I (Oral Solid Dosage Hub)',
+    name: 'PharmaTech Unit-I (Oral Solid Dosage Hub)',
     location: 'Baddi Industrial Area, Himachal Pradesh, India',
     area: '45,000 Sq. Ft. Built-up Area',
     cleanroomGrade: 'Class 100,000 (ISO Class 8)',
@@ -320,7 +320,7 @@ export const MANUFACTURING_UNITS: ManufacturingUnit[] = [
   },
   {
     id: 'unit-2',
-    name: 'Allrite Unit-II (Topical & Liquid Formulations)',
+    name: 'PharmaTech Unit-II (Topical & Liquid Formulations)',
     location: 'Baddi Industrial Area, Himachal Pradesh, India',
     area: '35,000 Sq. Ft. Built-up Area',
     cleanroomGrade: 'Class 100,000 (ISO Class 8)',
@@ -339,7 +339,7 @@ export const MANUFACTURING_UNITS: ManufacturingUnit[] = [
   },
   {
     id: 'unit-3',
-    name: 'Allrite Unit-III (Medicated Bars, Syndets & R&D Hub)',
+    name: 'PharmaTech Unit-III (Medicated Bars, Syndets & R&D Hub)',
     location: 'Baddi Industrial Area, Himachal Pradesh, India',
     area: '25,000 Sq. Ft. Built-up Area',
     cleanroomGrade: 'Controlled GLP & Manufacturing Zone',
@@ -361,7 +361,7 @@ export const MANUFACTURING_UNITS: ManufacturingUnit[] = [
 export const COMPANY_MILESTONES: MilestoneItem[] = [
   {
     year: '2010',
-    title: 'Founding of Allrite Group',
+    title: 'Founding of PharmaTech',
     description: 'Established the initial manufacturing campus in Baddi, Himachal Pradesh with a vision for precision CDMO pharmaceutical manufacturing.',
     metric: 'Unit-I Groundbreaking'
   },
@@ -396,7 +396,7 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     name: 'Harsimran Singh',
     role: 'Managing Director & Chief Executive',
     experience: '20+ Years in Pharmaceutical CDMO',
-    bio: 'Pioneered Allrite’s high-precision manufacturing systems, engineering partnerships with India’s leading healthcare multinationals.',
+    bio: 'Pioneered PharmaTech’s high-precision manufacturing systems, engineering partnerships with India’s leading healthcare multinationals.',
     focus: 'Strategic Growth & Operational Excellence'
   },
   {

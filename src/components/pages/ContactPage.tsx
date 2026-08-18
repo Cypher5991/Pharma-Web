@@ -296,7 +296,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenRfp }) => {
                   <Mail className="w-4 h-4 text-purple-400 shrink-0 mt-1" />
                   <div>
                     <strong className="text-white block font-semibold mb-0.5">Official Emails:</strong>
-                    <span className="text-slate-300 block font-mono">info@allrite.in • bd@allrite.in</span>
+                    <span className="text-slate-300 block font-mono">info@pharmatech.in • bd@pharmatech.in</span>
                   </div>
                 </div>
               </div>

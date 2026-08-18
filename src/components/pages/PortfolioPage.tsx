@@ -230,7 +230,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onOpenRfp }) => {
       packagingType,
       moq,
       leadTime: '3-4 Weeks (Commercial Run)',
-      description: `Validated WHO-GMP commercial formulation from Allrite Group Master Portfolio. Standardized for high stability, dissolution kinetics, and regulatory export dossiers.`,
+      description: `Validated WHO-GMP commercial formulation from PharmaTech Master Portfolio. Standardized for high stability, dissolution kinetics, and regulatory export dossiers.`,
       indications: [selectedProductItem.category],
       popular: true,
       readyDossier: true
@@ -247,7 +247,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onOpenRfp }) => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `allrite_portfolio_export_${new Date().toISOString().slice(0, 10)}.csv`;
+    a.download = `pharmatech_portfolio_export_${new Date().toISOString().slice(0, 10)}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -273,7 +273,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onOpenRfp }) => {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-400/30">
               <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Allrite Master Product Portfolio</span>
+              <span>PharmaTech Master Product Portfolio</span>
             </div>
 
             {/* Google Sheets Connection & Auth Status */}
@@ -326,7 +326,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onOpenRfp }) => {
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
-            Synchronized directly with Allrite Group's Master Formulation Database. Covering <strong className="text-white font-semibold">{osdCount} Tablets</strong>, <strong className="text-white font-semibold">{capsuleCount} Capsules</strong>, <strong className="text-white font-semibold">{liquidCount} Syrups/Liquids</strong>, <strong className="text-white font-semibold">{soapCount} Soaps</strong>, and <strong className="text-white font-semibold">{topicalCount} Topicals/Gels</strong> with validated stability and commercial batch dossiers.
+            Synchronized directly with PharmaTech's Master Formulation Database. Covering <strong className="text-white font-semibold">{osdCount} Tablets</strong>, <strong className="text-white font-semibold">{capsuleCount} Capsules</strong>, <strong className="text-white font-semibold">{liquidCount} Syrups/Liquids</strong>, <strong className="text-white font-semibold">{soapCount} Soaps</strong>, and <strong className="text-white font-semibold">{topicalCount} Topicals/Gels</strong> with validated stability and commercial batch dossiers.
           </p>
 
           {/* Quick Metrics Bar with Google Sheet Reference Link */}

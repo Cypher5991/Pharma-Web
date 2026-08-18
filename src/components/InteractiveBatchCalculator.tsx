@@ -23,7 +23,7 @@ export const InteractiveBatchCalculator: React.FC<InteractiveBatchCalculatorProp
       defaultVolume: 1000000,
       maxVolume: 15000000,
       unitLabel: 'Tablets / Units',
-      facility: 'Allrite Unit-I (45,000 sq.ft Solid Oral Complex)'
+      facility: 'PharmaTech Unit-I (45,000 sq.ft Solid Oral Complex)'
     },
     topicals: {
       label: 'Topicals & Semi-Solids',
@@ -32,7 +32,7 @@ export const InteractiveBatchCalculator: React.FC<InteractiveBatchCalculatorProp
       defaultVolume: 250000,
       maxVolume: 3000000,
       unitLabel: 'Tubes / Units',
-      facility: 'Allrite Unit-II (38,000 sq.ft Derma & Liquid Wing)'
+      facility: 'PharmaTech Unit-II (38,000 sq.ft Derma & Liquid Wing)'
     },
     liquids: {
       label: 'Oral Liquids & Syrups',
@@ -41,7 +41,7 @@ export const InteractiveBatchCalculator: React.FC<InteractiveBatchCalculatorProp
       defaultVolume: 100000,
       maxVolume: 2000000,
       unitLabel: 'Bottles',
-      facility: 'Allrite Unit-II (Closed-Loop CIP/SIP Bottling Plant)'
+      facility: 'PharmaTech Unit-II (Closed-Loop CIP/SIP Bottling Plant)'
     },
     soaps: {
       label: 'Medicated & Syndet Bars',
@@ -50,7 +50,7 @@ export const InteractiveBatchCalculator: React.FC<InteractiveBatchCalculatorProp
       defaultVolume: 200000,
       maxVolume: 3000000,
       unitLabel: 'Bars',
-      facility: 'Allrite Unit-III (30,000 sq.ft Plodder & Stamping Hub)'
+      facility: 'PharmaTech Unit-III (30,000 sq.ft Plodder & Stamping Hub)'
     },
     rd: {
       label: 'R&D / Tech Transfer Sprint',
@@ -59,7 +59,7 @@ export const InteractiveBatchCalculator: React.FC<InteractiveBatchCalculatorProp
       defaultVolume: 50000,
       maxVolume: 500000,
       unitLabel: 'Units / Pilot Runs',
-      facility: 'Allrite Research & Analytical Lab (GLP Certified)'
+      facility: 'PharmaTech Research & Analytical Lab (GLP Certified)'
     },
     ayush: {
       label: 'Ayush & Herbal',
@@ -68,7 +68,7 @@ export const InteractiveBatchCalculator: React.FC<InteractiveBatchCalculatorProp
       defaultVolume: 50000,
       maxVolume: 1000000,
       unitLabel: 'Herbal Units',
-      facility: 'Allrite Ayush Licensed Cleanroom Block'
+      facility: 'PharmaTech Ayush Licensed Cleanroom Block'
     },
     sachets: {
       label: 'Sachets & Powders',
@@ -77,7 +77,7 @@ export const InteractiveBatchCalculator: React.FC<InteractiveBatchCalculatorProp
       defaultVolume: 500000,
       maxVolume: 5000000,
       unitLabel: 'Sachets',
-      facility: 'Allrite Unit-I High-Speed Sachet Track'
+      facility: 'PharmaTech Unit-I High-Speed Sachet Track'
     }
   };
 

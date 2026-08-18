@@ -62,11 +62,11 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
             )}
             <a
-              href="mailto:info@allrite.in"
+              href="mailto:info@pharmatech.in"
               className="flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors text-xs"
             >
               <Mail className="w-3.5 h-3.5 text-blue-400" />
-              <span className="hidden sm:inline">info@allrite.in</span>
+              <span className="hidden sm:inline">info@pharmatech.in</span>
             </a>
             <span className="hidden sm:inline text-slate-700">|</span>
             <a
@@ -88,20 +88,22 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => handleNavClick('home')}
             className="flex items-center gap-3.5 group text-left cursor-pointer"
           >
-            <div className="h-11 w-11 rounded-xl bg-white p-1 flex items-center justify-center shadow-sm border border-slate-200 group-hover:border-blue-400 transition-colors">
-              <img src="/images/logo1.png" alt="Allrite Group" className="h-full w-full object-contain" />
+            <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-800 p-0.5 flex items-center justify-center shadow-sm shadow-blue-500/20 group-hover:scale-105 transition-transform">
+              <div className="h-full w-full rounded-[10px] bg-slate-950 flex items-center justify-center">
+                <Sparkles className="w-5 h-5 text-blue-400" />
+              </div>
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold tracking-tight text-slate-900 font-['Outfit',sans-serif]">
-                  ALLRITE
+                <span className="text-2xl font-extrabold tracking-tight text-slate-900 font-['Outfit',sans-serif]">
+                  Pharma<span className="text-blue-600">Tech</span>
                 </span>
-                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-700 border border-slate-200">
-                  GROUP
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200">
+                  CDMO
                 </span>
               </div>
               <span className="text-[10px] font-medium text-slate-500 tracking-wider uppercase">
-                Contract Development & Manufacturing (CDMO)
+                Contract Development & Manufacturing
               </span>
             </div>
           </button>

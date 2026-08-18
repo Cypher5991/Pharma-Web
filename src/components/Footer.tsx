@@ -65,15 +65,17 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Company Brand Column */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleNav('home')}>
-              <div className="h-10 w-10 rounded-xl bg-slate-900 p-1 flex items-center justify-center border border-slate-800 shadow-md">
-                <img src="/images/Logo_Dark Mode (2).png" alt="Allrite Group" className="h-full w-full object-contain" />
+              <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-800 p-0.5 flex items-center justify-center shadow-md shadow-blue-500/20">
+                <div className="h-full w-full rounded-[10px] bg-slate-950 flex items-center justify-center">
+                  <ShieldCheck className="w-5 h-5 text-blue-400" />
+                </div>
               </div>
               <div>
                 <span className="text-xl font-bold text-white tracking-tight font-['Outfit',sans-serif]">
-                  ALLRITE GROUP
+                  Pharma<span className="text-blue-400">Tech</span> Group
                 </span>
                 <div className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                  Formerly Allkind Healthcare (Est. 2010)
+                  Contract Development & Manufacturing
                 </div>
               </div>
             </div>
@@ -97,8 +99,8 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-blue-400 shrink-0" />
-                <a href="mailto:info@allrite.in" className="hover:text-white transition-colors">
-                  info@allrite.in • bd@allrite.in
+                <a href="mailto:info@pharmatech.in" className="hover:text-white transition-colors">
+                  info@pharmatech.in • bd@pharmatech.in
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -110,7 +112,7 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
           </div>
 
-          {/* Column 2: Navigation Pages matching allrite.in */}
+          {/* Column 2: Navigation Pages */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white font-['Outfit',sans-serif]">
               Site Navigation
@@ -250,7 +252,7 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <div>
-            © {new Date().getFullYear()} Allrite Group. All Rights Reserved. Pharmaceutical, Derma & Cosmetic CDMO.
+            © {new Date().getFullYear()} PharmaTech Group. All Rights Reserved. Pharmaceutical, Derma & Cosmetic CDMO.
           </div>
 
           <div className="flex items-center gap-6">

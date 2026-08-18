@@ -93,7 +93,7 @@ export const QualityPage: React.FC<QualityPageProps> = ({ onOpenRfp }) => {
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
-            At Allrite Group, quality is engineered into every unit operation. Our 3 Baddi manufacturing units adhere to stringent WHO-GMP, cGMP Schedule M, and GLP standards to guarantee zero-defect pharmaceutical batches.
+            At PharmaTech, quality is engineered into every unit operation. Our 3 Baddi manufacturing units adhere to stringent WHO-GMP, cGMP Schedule M, and GLP standards to guarantee zero-defect pharmaceutical batches.
           </p>
 
           {/* Quick Metrics */}

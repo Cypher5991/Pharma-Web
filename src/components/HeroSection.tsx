@@ -19,7 +19,7 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRfp, onSelectCategory }) => {
   return (
-    <section className="relative overflow-hidden bg-slate-950 text-white min-h-[620px] lg:min-h-[720px] flex items-center">
+    <section className="relative overflow-hidden bg-slate-950 text-white min-h-[500px] lg:min-h-[560px] flex items-center">
       {/* Background Factory Video Loop (YouTube) & Fallback Poster */}
       <div 
         className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-cover bg-center"
@@ -28,7 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRfp, onSelectCat
         <div className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2">
           <iframe
             src="https://www.youtube.com/embed/x7i6L6cqWLY?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=x7i6L6cqWLY&playsinline=1"
-            title="Allrite Group Background Video"
+            title="PharmaTech Background Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             className="w-full h-full opacity-60 mix-blend-screen"
@@ -40,8 +40,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRfp, onSelectCat
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20" />
       </div>
 
-      {/* Main Content Container - Wide Screen & Minimal */}
-      <div className="relative z-10 w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24">
+      {/* Main Content Container - Tight, Balanced Spacing Below Menu */}
+      <div className="relative z-10 w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
         <div className="max-w-4xl space-y-6">
           {/* Compliance & Trust Pill */}
           <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-slate-300 text-xs font-medium backdrop-blur-md shadow-sm">

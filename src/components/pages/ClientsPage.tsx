@@ -30,7 +30,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenRfp }) => {
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-            From India’s top pharmaceutical enterprises to fast-growing direct-to-consumer derma-cosmetic brands, Allrite provides flexible commercial models spanning Third-Party (P2P), Loan License, and Custom Formulation Development.
+            From India’s top pharmaceutical enterprises to fast-growing direct-to-consumer derma-cosmetic brands, PharmaTech provides flexible commercial models spanning Third-Party (P2P), Loan License, and Custom Formulation Development.
           </p>
 
           <div className="pt-4 flex flex-wrap items-center gap-4">
@@ -64,7 +64,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenRfp }) => {
             {
               title: 'Principal to Principal (P2P) / Third Party',
               badge: 'Most Popular',
-              desc: 'Turnkey contract manufacturing where Allrite procures tested raw APIs, excipients, and primary packaging materials, delivering finished, tested, release-ready batches.',
+              desc: 'Turnkey contract manufacturing where PharmaTech procures tested raw APIs, excipients, and primary packaging materials, delivering finished, tested, release-ready batches.',
               idealFor: 'Pharma marketers, D2C brands, Hospital supply distributors',
               turnaround: '2–3 Weeks standard batch turnaround'
             },
@@ -160,7 +160,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenRfp }) => {
               Our Trusted Partners
             </span>
             <h2 className="text-3xl font-extrabold text-slate-900 font-['Outfit',sans-serif]">
-              Leading Healthcare & FMCG Brands Manufactured by Allrite
+              Leading Healthcare & FMCG Brands Manufactured by PharmaTech
             </h2>
             <p className="text-sm text-slate-600">
               Trusted by multinational enterprises, domestic leaders, and innovative D2C brands.
@@ -229,13 +229,13 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenRfp }) => {
 
           <div className="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
             <p>
-              At <strong>Allrite Group</strong>, we recognize that our success is intrinsically linked to the trust and confidence placed in us by our invaluable clients. Our clients are not just customers; they are valued collaborators and partners on our journey towards pharmaceutical excellence.
+              At <strong>PharmaTech Group</strong>, we recognize that our success is intrinsically linked to the trust and confidence placed in us by our invaluable clients. Our clients are not just customers; they are valued collaborators and partners on our journey towards pharmaceutical excellence.
             </p>
             <p>
               Their insights, feedback, and trust in our products and services drive us to continuously raise the bar and exceed expectations. We are deeply committed to understanding and meeting the diverse needs of our clients, ensuring that every interaction is characterized by professionalism, reliability, and integrity.
             </p>
             <p className="italic text-slate-700 font-medium pt-2">
-              “To our valued clients, we extend our sincere thanks for your continued partnership and trust in Allrite Group. Your support inspires us to push the boundaries of manufacturing excellence.” — The Allrite Leadership Team
+              “To our valued clients, we extend our sincere thanks for your continued partnership and trust in PharmaTech Group. Your support inspires us to push the boundaries of manufacturing excellence.” — The PharmaTech Leadership Team
             </p>
           </div>
         </section>
